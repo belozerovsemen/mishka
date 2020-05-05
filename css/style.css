@@ -1,0 +1,8 @@
+@font-face font-family: "Open Sans Regular"
+  src: url(../fonts/OpenSans/OpenSansRegular/OpenSans-Regular-webfont.woff)
+  src: url(../fonts/OpenSans/OpenSansRegular/OpenSans-Regular-webfont.woff)
+@font-face
+  font-family: "Open Sans Bold"
+  src: url(../fonts/OpenSans/OpenSansBold/OpenSans-Bold-webfont.woff);
+body {
+  font-family: Open Sans Bold; }
