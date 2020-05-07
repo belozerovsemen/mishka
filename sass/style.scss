@@ -1,7 +1,7 @@
 @import "fonts/fonts";
-$font-main: Open Sans Bold;
+@import "../node_modules/normalize-scss/sass/_normalize";
+@import "blocks/main-nav";
 
-body{
-  font-family: $font-main;
-}
+
+
 
