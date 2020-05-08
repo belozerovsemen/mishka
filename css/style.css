@@ -18,3 +18,20 @@ body {
 .main-nav {
   font-size: 17px;
   line-height: 24px; }
+
+.main-nav__list {
+  list-style: none; }
+  .main-nav__list a {
+    text-decoration: none;
+    color: #000000; }
+
+.promo-list {
+  font-size: 15px; }
+
+.promo__delivery {
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  font-size: 15px; }
+
+.promo__title {
+  font-size: 53px;
+  line-height: 57px; }
