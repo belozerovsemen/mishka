@@ -1,0 +1,10 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.about-us__title{
+  @include heading;
+}
+.about-us__list{
+  list-style: none;
+  @include fonts-1(20px,22px);
+}

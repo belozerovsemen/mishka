@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Open Sans Bold";
   src: url("../fonts/OpenSans/OpenSansBold/OpenSans-Bold.woff2") format("woff2"), url("../fonts/OpenSans/OpenSansBold/OpenSans-Bold-webfont.woff") format("woff");
@@ -29,9 +30,83 @@ body {
   font-size: 15px; }
 
 .promo__delivery {
-  font-family: "Open Sans Regular", Arial, sans-serif;
-  font-size: 15px; }
+  font-size: 15px;
+  line-height: 24px;
+  font-family: "Open Sans Regular", Arial, sans-serif; }
 
 .promo__title {
   font-size: 53px;
   line-height: 57px; }
+
+/* цвета */
+.offers-list {
+  list-style: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff; }
+
+.offers-list__item {
+  background-color: #63d1bb; }
+
+.offers-list__item--toys {
+  background-color: #56c3b2; }
+
+/* цвета */
+.product__of-week {
+  font-size: 17px;
+  line-height: 17px;
+  color: #63d1bb; }
+
+.product__title {
+  font-size: 53px;
+  line-height: 57px; }
+
+.product__description {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "Open Sans Regular", Arial, sans-serif; }
+
+.product__characteristics {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Open Sans Regular", Arial, sans-serif; }
+
+.product__price {
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 24px; }
+
+.product__order {
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #444444; }
+
+/* цвета */
+/* цвета */
+.about-us__title {
+  font-size: 53px;
+  line-height: 57px; }
+
+.about-us__list {
+  list-style: none;
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 22px; }
+
+/* цвета */
+.reviews__title {
+  font-size: 53px;
+  line-height: 57px; }
+
+.reviews__write {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #444444; }
+
+.reviews__description {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "Open Sans Regular", Arial, sans-serif; }

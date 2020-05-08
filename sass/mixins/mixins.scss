@@ -1,8 +1,19 @@
-@mixin fonts-1{
+@mixin fonts-1($font-size:20px, $line-height:24px){
+  font-family: "Open Sans Bold", Arial, sans-serif;
+  font-size: $font-size;
+  line-height: $line-height;
+}
+@mixin fonts-2($font-size: 17px, $line-height: 30px){
+  font-size: $font-size;
+  line-height: $line-height;
   font-family: "Open Sans Regular", Arial, sans-serif;
-  font-size: 15px;
 }
 @mixin heading{
   font-size: 53px;
   line-height: 57px;
+}
+@mixin button{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $button-color;
 }

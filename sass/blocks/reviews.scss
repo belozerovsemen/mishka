@@ -1,0 +1,12 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.reviews__title{
+  @include heading;
+}
+.reviews__write{
+  @include button;
+}
+.reviews__description{
+  @include fonts-2;
+}

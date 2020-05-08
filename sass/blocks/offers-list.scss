@@ -1,0 +1,13 @@
+@import "variables/variables";
+.offers-list{
+  list-style: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.offers-list__item{
+  background-color: $akvamarin-color;
+}
+.offers-list__item--toys{
+  background-color: $akvamarin-color-2;
+}

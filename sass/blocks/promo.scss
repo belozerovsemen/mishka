@@ -4,7 +4,7 @@
   font-size: 15px;
 }
 .promo__delivery{
-  @include fonts-1;
+  @include fonts-2(15px,24px);
 }
 .promo__title{
   @include heading;

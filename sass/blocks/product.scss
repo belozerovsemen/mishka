@@ -1,0 +1,24 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.product__of-week{
+  font-size: 17px;
+  line-height: 17px;
+  color: $akvamarin-color;
+}
+.product__title{
+  @include heading;
+}
+.product__description{
+  @include fonts-2;
+}
+.product__characteristics{
+  @include fonts-2(15px,20px);
+}
+.product__price{
+  @include fonts-1(20px,24px);
+}
+.product__order{
+  @include fonts-1(17px,20px);
+  @include button;
+}
