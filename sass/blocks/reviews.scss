@@ -10,3 +10,12 @@
 .reviews__description{
   @include fonts-2;
 }
+.reviews__username{
+  @include fonts-1(17px, 24px);
+}
+.reviews__login{
+  @include fonts-2(17px, 24px);
+}
+.reviews__slider{
+  list-style: none;
+}

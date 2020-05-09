@@ -1,0 +1,13 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.video__title{
+  @include fonts-1(20px, 24px);
+}
+.video__description{
+  @include fonts-2(15px, 30px);
+}
+.video__order{
+  @include button;
+  @include fonts-1(17px, 16px);
+}

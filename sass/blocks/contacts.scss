@@ -1,0 +1,16 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.contacts__title{
+  @include heading;
+}
+.contacts__email{
+  @include fonts-2;
+}
+.contacts__address{
+  @include fonts-2;
+}
+.contacts__write-us{
+  @include button;
+  @include fonts-1(17px, 20px);
+}

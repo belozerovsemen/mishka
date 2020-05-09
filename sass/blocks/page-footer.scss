@@ -1,0 +1,12 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.social__list{
+  list-style: none;
+}
+.copyright__text{
+  @include fonts-1(19px, 18px);
+}
+.social__link{
+  text-decoration: none;
+}

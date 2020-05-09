@@ -1,3 +1,4 @@
+// шрифты, заголовки
 @mixin fonts-1($font-size:20px, $line-height:24px){
   font-family: "Open Sans Bold", Arial, sans-serif;
   font-size: $font-size;
@@ -8,10 +9,12 @@
   line-height: $line-height;
   font-family: "Open Sans Regular", Arial, sans-serif;
 }
-@mixin heading{
-  font-size: 53px;
-  line-height: 57px;
+@mixin heading($font-size: 53px, $line-height: 57px){
+  font-size: $font-size;
+  line-height: $line-height;
 }
+
+//кнопки
 @mixin button{
   text-decoration: none;
   text-transform: uppercase;

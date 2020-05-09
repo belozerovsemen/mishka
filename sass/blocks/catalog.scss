@@ -1,0 +1,15 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.catalog__list{
+  list-style: none;
+}
+.catalog__name{
+  @include  heading(20px, 24px);
+}
+.catalog__characteristics{
+  @include fonts-2(15px, 30px);
+}
+.catalog__price{
+  @include fonts-1(17px, 24px);
+}

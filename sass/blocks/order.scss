@@ -1,0 +1,17 @@
+@import "variables/variables";
+@import "mixins/mixins";
+
+.order__description{
+  @include fonts-2(17px, 30px);
+}
+.order__item{
+  border: none;
+}
+.order__legend{
+  @include fonts-1(17px, 16px);
+  color: $akvamarin-color;
+  text-transform: uppercase;
+}
+.order__form{
+  @include fonts-1(19px, 18px);
+}
