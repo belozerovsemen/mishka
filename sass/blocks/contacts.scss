@@ -1,5 +1,5 @@
-@import "variables/variables";
-@import "mixins/mixins";
+@import "variables";
+@import "mixins";
 
 .contacts__title{
   @include heading;

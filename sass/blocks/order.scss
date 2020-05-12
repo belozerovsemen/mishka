@@ -1,5 +1,5 @@
-@import "variables/variables";
-@import "mixins/mixins";
+@import "variables";
+@import "mixins";
 
 .order__description{
   @include fonts-2(17px, 30px);

@@ -1,5 +1,5 @@
-@import "variables/variables";
-@import "mixins/mixins";
+@import "variables";
+@import "mixins";
 
 .video__title{
   @include fonts-1(20px, 24px);

@@ -1,6 +1,10 @@
+@import "variables";
+
 .main-nav{
   font-size: 17px;
   line-height: 24px;
+  display: flex;
+  flex-direction: column;
 }
 .main-nav__list{
   list-style: none;
@@ -8,4 +12,7 @@
     text-decoration: none;
     color: #000000;
   }
+}
+.page-header__logo{
+  order: -1;
 }

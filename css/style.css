@@ -17,13 +17,18 @@ body {
 
 .main-nav {
   font-size: 17px;
-  line-height: 24px; }
+  line-height: 24px;
+  display: flex;
+  flex-direction: column; }
 
 .main-nav__list {
   list-style: none; }
   .main-nav__list a {
     text-decoration: none;
     color: #000000; }
+
+.page-header__logo {
+  order: -1; }
 
 .promo-list {
   font-size: 15px; }

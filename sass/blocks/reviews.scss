@@ -1,6 +1,5 @@
-@import "variables/variables";
-@import "mixins/mixins";
-
+@import "variables";
+@import "mixins";
 .reviews__title{
   @include heading;
 }
