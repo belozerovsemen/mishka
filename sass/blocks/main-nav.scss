@@ -8,6 +8,8 @@
 }
 .main-nav__wrapper{
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 .main-nav__list{
   list-style: none;
@@ -15,9 +17,25 @@
   padding: 0;
   a{
     text-decoration: none;
-    color: #000000;
+    color: $black-color;
   }
 }
 .page-header__logo{
   order: -1;
+}
+@media (min-width: $tablet-width){
+  .main-nav{
+    flex-direction: row;
+  }
+}
+@media (min-width: $desktop-width){
+  .main-nav{
+    flex-direction: row;
+  }
+  .page-header__logo{
+    order: 0;
+  }
+  .main-nav__wrapper{
+    flex-direction: row;
+  }
 }

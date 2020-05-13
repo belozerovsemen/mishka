@@ -22,7 +22,9 @@ body {
   flex-direction: column; }
 
 .main-nav__wrapper {
-  margin: 0 auto; }
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
 
 .main-nav__list {
   list-style: none;
@@ -34,6 +36,18 @@ body {
 
 .page-header__logo {
   order: -1; }
+
+@media (min-width: 768px) {
+  .main-nav {
+    flex-direction: row; } }
+
+@media (min-width: 1200px) {
+  .main-nav {
+    flex-direction: row; }
+  .page-header__logo {
+    order: 0; }
+  .main-nav__wrapper {
+    flex-direction: row; } }
 
 .promo-list {
   font-size: 15px; }
