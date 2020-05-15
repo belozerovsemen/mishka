@@ -39,7 +39,10 @@ body {
 
 @media (min-width: 768px) {
   .main-nav {
-    flex-direction: row; } }
+    flex-direction: row; }
+  .main-nav__wrapper {
+    flex-direction: row;
+    margin: 0; } }
 
 @media (min-width: 1200px) {
   .main-nav {
@@ -58,8 +61,13 @@ body {
   font-family: "Open Sans Regular", Arial, sans-serif; }
 
 .promo__title {
-  font-size: 53px;
-  line-height: 57px; }
+  font-size: 27px;
+  line-height: 30px; }
+
+@media (min-width: 768px) {
+  .promo__title {
+    font-size: 43px;
+    line-height: 50px; } }
 
 .offers-list {
   list-style: none;
