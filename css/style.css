@@ -19,12 +19,9 @@ body {
   font-size: 17px;
   line-height: 24px;
   display: flex;
-  flex-direction: column; }
-
-.main-nav__wrapper {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 320px;
+  margin: 0 auto; }
 
 .main-nav__list {
   list-style: none;
@@ -34,23 +31,32 @@ body {
     text-decoration: none;
     color: #000000; }
 
+.main-nav__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 280px; }
+
+.main-nav__toggle {
+  width: 60px; }
+
 .page-header__logo {
   order: -1; }
 
 @media (min-width: 768px) {
   .main-nav {
-    flex-direction: row; }
+    flex-direction: row;
+    width: 768px; }
   .main-nav__wrapper {
     flex-direction: row;
-    margin: 0; } }
+    width: 668px;
+    justify-content: space-between; } }
 
 @media (min-width: 1200px) {
   .main-nav {
-    flex-direction: row; }
-  .page-header__logo {
-    order: 0; }
+    width: 1200px; }
   .main-nav__wrapper {
-    flex-direction: row; } }
+    width: 1050px; } }
 
 .promo-list {
   font-size: 15px; }
@@ -63,11 +69,6 @@ body {
 .promo__title {
   font-size: 27px;
   line-height: 30px; }
-
-@media (min-width: 768px) {
-  .promo__title {
-    font-size: 43px;
-    line-height: 50px; } }
 
 .offers-list {
   list-style: none;

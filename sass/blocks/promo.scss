@@ -9,8 +9,3 @@
 .promo__title{
   @include heading(27px, 30px);
 }
-@media (min-width: $tablet-width){
-  .promo__title{
-    @include heading(43px, 50px);
-  }
-}
