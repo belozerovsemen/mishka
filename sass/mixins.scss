@@ -12,6 +12,7 @@
 @mixin heading($font-size: 53px, $line-height: 57px){
   font-size: $font-size;
   line-height: $line-height;
+  font-weight: normal;
 }
 
 //кнопки

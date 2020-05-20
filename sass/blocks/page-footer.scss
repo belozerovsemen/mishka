@@ -1,12 +1,22 @@
 @import "variables";
 @import "mixins";
 
+.page-footer{
+  display: flex;
+  flex-direction: column;
+}
 .social__list{
   list-style: none;
+  display: flex;
 }
 .copyright__text{
   @include fonts-1(19px, 18px);
 }
 .social__link{
   text-decoration: none;
+}
+@media (min-width: $tablet-width){
+  .page-footer{
+    flex-direction: row;
+  }
 }

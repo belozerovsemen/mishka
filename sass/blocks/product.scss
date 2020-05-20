@@ -1,13 +1,19 @@
 @import "variables";
 @import "mixins";
 
+.product{
+  display: flex;
+  flex-direction: column;
+}
 .product__of-week{
   font-size: 17px;
-  line-height: 17px;
+  line-height: 20px;
   color: $akvamarin-color;
-}
+  text-transform: uppercase;
+ }
 .product__title{
-  @include heading;
+  @include heading(25px, 30px);
+
 }
 .product__description{
   @include fonts-2;
@@ -21,4 +27,20 @@
 .product__order{
   @include fonts-1(17px,20px);
   @include button;
+}
+@media (min-width: $tablet-width){
+  .product{
+    flex-direction: row;
+  }
+  .product__title{
+    @include heading(43px, 50px);
+  }
+  .product__of-week{
+    order: 1;
+  }
+}
+@media (min-width: $desktop-width){
+  .product__title{
+    @include heading(53px, 57px);
+  }
 }

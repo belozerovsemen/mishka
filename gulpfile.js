@@ -19,7 +19,9 @@ gulp.task('watch', function () {
     browserSync.init({
         server: {
             baseDir: './'
-        }
+        },
+        browser: 'firefox',
+        notify: false
     });
     gulp.watch('./sass/**/*.scss', gulp.parallel('sass'));
     gulp.watch('./*.html').on('change', browserSync.reload);

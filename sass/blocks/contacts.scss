@@ -1,8 +1,16 @@
 @import "variables";
 @import "mixins";
 
+
+.contacts{
+  display: flex;
+  flex-direction: column;
+}
 .contacts__title{
-  @include heading;
+  @include heading(18px, 30px);
+}
+.contacts__wrapper{
+  display: flex;
 }
 .contacts__email{
   @include fonts-2;
@@ -13,4 +21,28 @@
 .contacts__write-us{
   @include button;
   @include fonts-1(17px, 20px);
+  order: 5;
+}
+@media (min-width: $tablet-width){
+  .contacts{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .contacts__title{
+    @include heading(43px, 50px);
+  }
+  .contacts__wrapper{
+    flex-basis: 50%;
+  }
+  .contacts__image{
+    flex-basis: 100%;
+  }
+}
+@media (min-width: $desktop-width){
+  .contacts__title{
+    @include heading(53px, 57px);
+  }
+  .contacts__image{
+    flex-basis: 50%;
+  }
 }

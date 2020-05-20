@@ -1,10 +1,36 @@
 @import "variables";
 @import "mixins";
 
+.about-us{
+  display: flex;
+  flex-direction: column;
+}
 .about-us__title{
-  @include heading;
+  @include heading(25px, 30px);
 }
 .about-us__list{
   list-style: none;
   @include fonts-1(20px,22px);
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: $tablet-width){
+  .about-us__title{
+    @include heading(43px, 50px);
+  }
+  .about-us__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-us__item{
+    flex-basis: 50%;
+  }
+}
+@media (min-width: $desktop-width){
+  .about-us__title{
+    @include heading(53px, 57px);
+  }
+  .about-us__item{
+    flex-basis: 50%;
+  }
 }
