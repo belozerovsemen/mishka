@@ -6,6 +6,8 @@
 }
 .order__item{
   border: none;
+  display: flex;
+  flex-direction: column;
 }
 .order__legend{
   @include fonts-1(17px, 16px);
@@ -15,3 +17,18 @@
 .order__form{
   @include fonts-1(19px, 18px);
 }
+@media (min-width: $tablet-width){
+  .order__item{
+    flex-wrap: wrap;
+  }
+  .order__legend{
+    align-self: flex-start;
+  }
+}
+@media (min-width: $desktop-width){
+  .order__item:nth-of-type(2){
+    flex-direction: row;
+  }
+
+}
+

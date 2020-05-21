@@ -1,6 +1,11 @@
 @import "variables";
 @import "mixins";
 
+
+.video{
+  display: flex;
+  flex-direction: column;
+}
 .video__title{
   @include fonts-1(20px, 24px);
 }
@@ -10,4 +15,14 @@
 .video__order{
   @include button;
   @include fonts-1(17px, 16px);
+}
+@media (min-width: $tablet-width) {
+  .video__preview{
+    order: -1;
+  }
+}
+@media (min-width: $desktop-width) {
+  .video{
+    flex-direction: row;
+  }
 }
