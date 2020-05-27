@@ -2,9 +2,11 @@
 
 .promo-list{
   font-size: 15px;
+  display: none;
 }
 .promo__delivery{
   @include fonts-2(15px,24px);
+  display: none;
 }
 .promo__title{
   @include heading(27px, 30px);
