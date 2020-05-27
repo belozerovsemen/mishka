@@ -21,9 +21,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 320px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 .main-nav__list {
+  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -35,13 +37,27 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 280px; }
+  width: 280px;
+  padding-top: 18px; }
 
 .main-nav__toggle {
-  width: 60px; }
+  width: 60px;
+  position: absolute;
+  top: 17px;
+  right: 13px; }
 
 .page-header__logo {
-  order: -1; }
+  display: block;
+  width: 110px;
+  height: 50px;
+  order: -1;
+  background-image: url("../img/logo-2.svg");
+  background-repeat: no-repeat;
+  margin: 0 auto; }
+
+.site-list__item {
+  padding: 30px 60px 30px 46px;
+  border-bottom: 1px solid #ececec; }
 
 @media (min-width: 768px) {
   .main-nav {
@@ -50,13 +66,17 @@ body {
   .main-nav__wrapper {
     flex-direction: row;
     width: 668px;
-    justify-content: space-between; } }
+    justify-content: space-between; }
+  .page-header__logo {
+    background-image: url("../img/logo-4.svg"); } }
 
 @media (min-width: 1200px) {
   .main-nav {
     width: 1200px; }
   .main-nav__wrapper {
-    width: 1050px; } }
+    width: 1050px; }
+  .page-header__logo {
+    background-image: url("../img/logo.svg"); } }
 
 .promo-list {
   font-size: 15px; }
