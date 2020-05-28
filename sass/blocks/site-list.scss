@@ -1,0 +1,13 @@
+.site-list__item{
+  padding: 28px 60px 24px 46px;
+  border-bottom: 1px solid #ececec;
+  &:nth-child(1){
+    padding: 27px 60px 24px 42px;
+  }
+  a:hover{
+    opacity: 0.6;
+  }
+  a:active{
+    opacity: 0.1;
+  }
+}

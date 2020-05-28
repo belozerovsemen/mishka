@@ -1,0 +1,36 @@
+@import "variables";
+
+.user-list__item{
+  padding: 28px 60px 24px 46px;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  &:nth-child(1){
+    padding: 30px 60px 24px 27px;
+  }
+  &:nth-child(2){
+    padding: 31px 35px 24px 46px;
+  }
+  a:hover{
+    opacity: 0.6;
+  }
+  a:active{
+    opacity: 0.1;
+  }
+  svg{
+    position: absolute;
+    left: 30px;
+    top: 36px;
+  }
+}
+.user-list__search:hover + svg .st0 {
+   fill: #63d1bb;
+ }
+.user-list__cart:hover + svg .st0 {
+  fill: #63d1bb;
+}
+.user-list__search:active + svg .st0 {
+  opacity: 0.1;
+}
+.user-list__cart:active + svg .st0 {
+  opacity: 0.1;
+}

@@ -20,7 +20,7 @@ body {
   line-height: 24px;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
   padding-top: 20px; }
@@ -42,77 +42,65 @@ body {
   padding-top: 18px; }
 
 .main-nav__toggle {
-  width: 60px;
+  width: 23px;
+  height: 20px;
   position: absolute;
-  top: 17px;
-  right: 13px; }
+  top: 28px;
+  right: 29px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background-color: #fff; }
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 1px;
+  width: 21px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000; }
+
+.main-nav--opened .main-nav__toggle {
+  top: 28px;
+  right: 29px; }
+  .main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: -2px;
+    width: 28px;
+    height: 2px;
+    background-color: #000000; }
+  .main-nav--opened .main-nav__toggle::before {
+    transform: rotate(45deg);
+    box-shadow: none; }
+  .main-nav--opened .main-nav__toggle::after {
+    transform: rotate(-45deg); }
+
+.main-nav--closed .site-list {
+  display: none; }
+
+.main-nav--closed .user-list {
+  display: none; }
+
+.page-header__logo--wrapper {
+  order: -2;
+  border-bottom: 1px solid #ececec; }
 
 .page-header__logo {
   display: block;
-  width: 100%;
+  width: 90px;
   height: 58px;
-  order: -1;
   background-image: url("../img/logo-2.svg");
   background-repeat: no-repeat;
   background-size: 90px;
-  margin: 0 auto;
-  background-position: 114px 1px;
-  border-bottom: 1px solid #ececec; }
+  margin: 0 auto; }
   .page-header__logo:hover {
     opacity: 0.6; }
   .page-header__logo:active {
     opacity: 0.1; }
-
-.site-list__item {
-  padding: 28px 60px 24px 46px;
-  border-bottom: 1px solid #ececec; }
-  .site-list__item:nth-child(1) {
-    padding: 27px 60px 24px 42px; }
-  .site-list__item a:hover {
-    opacity: 0.6; }
-  .site-list__item a:active {
-    opacity: 0.1; }
-
-.user-list__item {
-  padding: 28px 60px 24px 46px;
-  border-bottom: 1px solid #ececec;
-  position: relative; }
-  .user-list__item:nth-child(1) {
-    padding: 30px 60px 24px 27px; }
-  .user-list__item:nth-child(2) {
-    padding: 31px 35px 24px 46px; }
-  .user-list__item a:hover {
-    opacity: 0.6; }
-  .user-list__item a:active {
-    opacity: 0.1; }
-
-.user-list__search::before {
-  content: '';
-  width: 22px;
-  height: 22px;
-  background-image: url("../img/search-icon.svg");
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 18px;
-  left: 32px;
-  top: 37px; }
-
-.user-list__search:hover::before {
-  background-image: url("../img/search-icon-hover.svg"); }
-
-.user-list__cart::before {
-  content: '';
-  width: 23px;
-  height: 20px;
-  background-image: url("../img/cart-icon.svg");
-  position: absolute;
-  background-repeat: no-repeat;
-  background-size: 19px;
-  left: 31px;
-  top: 36px; }
-
-.user-list__cart:hover::before {
-  background-image: url("../img/cart-icon-hover.svg"); }
 
 @media (min-width: 768px) {
   .main-nav {
@@ -486,3 +474,54 @@ body {
 @media (min-width: 1200px) {
   .order__item:nth-of-type(2) {
     flex-direction: row; } }
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  bottom: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.site-list__item {
+  padding: 28px 60px 24px 46px;
+  border-bottom: 1px solid #ececec; }
+  .site-list__item:nth-child(1) {
+    padding: 27px 60px 24px 42px; }
+  .site-list__item a:hover {
+    opacity: 0.6; }
+  .site-list__item a:active {
+    opacity: 0.1; }
+
+.user-list__item {
+  padding: 28px 60px 24px 46px;
+  border-bottom: 1px solid #ececec;
+  position: relative; }
+  .user-list__item:nth-child(1) {
+    padding: 30px 60px 24px 27px; }
+  .user-list__item:nth-child(2) {
+    padding: 31px 35px 24px 46px; }
+  .user-list__item a:hover {
+    opacity: 0.6; }
+  .user-list__item a:active {
+    opacity: 0.1; }
+  .user-list__item svg {
+    position: absolute;
+    left: 30px;
+    top: 36px; }
+
+.user-list__search:hover + svg .st0 {
+  fill: #63d1bb; }
+
+.user-list__cart:hover + svg .st0 {
+  fill: #63d1bb; }
+
+.user-list__search:active + svg .st0 {
+  opacity: 0.1; }
+
+.user-list__cart:active + svg .st0 {
+  opacity: 0.1; }
