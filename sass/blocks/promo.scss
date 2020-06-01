@@ -24,10 +24,21 @@
     @include heading(43px, 50px);
     text-align: center;
   }
+  .promo__delivery{
+    display: block;
+    margin-left: 436px;
+    margin-top: -24px;
+  }
 }
 @media (min-width: $desktop-width) {
+  .main-nav--promo{
+    border: none;
+  }
    .promo__title{
      @include heading(53px, 57px);
      text-align: center;
    }
+  .promo__delivery{
+    margin: 0;
+  }
 }
