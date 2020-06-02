@@ -1,13 +1,23 @@
 @import "variables";
+@import "mixins";
 .offers-list{
   list-style: none;
-  font-size: 20px;
-  line-height: 30px;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  @import fonts-1(19px, 24px);
 }
 .offers-list__item{
   background-color: $akvamarin-color;
+  padding: 25px 182px 17px 30px;
 }
 .offers-list__item--toys{
   background-color: $akvamarin-color-2;
+}
+@media (min-width: $tablet-width) {
+  .offers-list {
+    flex-direction: row;
+  }
 }

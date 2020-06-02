@@ -1,5 +1,11 @@
 @import "mixins";
-
+.promo{
+  background-image: url("../img/promo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 178% ;
+  background-position: -125px -8px;
+  padding-top: 58px;
+}
 .promo-list{
   font-size: 15px;
   display: none;
@@ -11,16 +17,13 @@
 .promo__title{
   @include heading(27px, 30px);
   text-align: center;
-}
-.offers-list{
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  margin-bottom: 123px;
+  padding: 0 10px;
+
 }
 @media (min-width: $tablet-width) {
-  .offers-list {
-    flex-direction: row;
-  }
-  .promo__title{
+  .promo__title {
     @include heading(43px, 50px);
     text-align: center;
   }

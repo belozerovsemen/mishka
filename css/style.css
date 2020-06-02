@@ -17,8 +17,7 @@
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  position: relative;
-  padding-top: 20px; }
+  position: relative; }
 
 .main-nav__list {
   text-align: center;
@@ -39,7 +38,7 @@
   width: 23px;
   height: 20px;
   position: absolute;
-  top: 28px;
+  top: 10px;
   right: 29px;
   border: none;
   display: block;
@@ -57,7 +56,7 @@
   box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000; }
 
 .main-nav--opened .main-nav__toggle {
-  top: 28px;
+  top: 10px;
   right: 29px; }
   .main-nav--opened .main-nav__toggle::before, .main-nav--opened .main-nav__toggle::after {
     content: "";
@@ -124,11 +123,9 @@
 
 @media (min-width: 1200px) {
   .main-nav {
-    width: 1200px;
+    padding-left: 70px;
     flex-wrap: nowrap;
     border-bottom: 1px solid #ececec; }
-  .main-nav__wrapper {
-    width: 1050px; }
   .page-header__logo {
     background-image: url("../img/logo.svg");
     width: 153px;
@@ -140,7 +137,15 @@
     height: 72px;
     padding-left: 0;
     padding-top: 0;
-    border: none; } }
+    border: none;
+    margin-right: 51px; } }
+
+.promo {
+  background-image: url("../img/promo-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 178%;
+  background-position: -125px -8px;
+  padding-top: 58px; }
 
 .promo-list {
   font-size: 15px;
@@ -156,15 +161,12 @@
   font-size: 27px;
   line-height: 30px;
   font-weight: normal;
-  text-align: center; }
-
-.offers-list {
-  display: flex;
-  flex-direction: column; }
+  text-align: center;
+  margin: 0;
+  margin-bottom: 123px;
+  padding: 0 10px; }
 
 @media (min-width: 768px) {
-  .offers-list {
-    flex-direction: row; }
   .promo__title {
     font-size: 43px;
     line-height: 50px;
@@ -190,13 +192,22 @@
   list-style: none;
   font-size: 20px;
   line-height: 30px;
-  color: #ffffff; }
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0; }
 
 .offers-list__item {
-  background-color: #63d1bb; }
+  background-color: #63d1bb;
+  padding: 25px 182px 17px 30px; }
 
 .offers-list__item--toys {
   background-color: #56c3b2; }
+
+@media (min-width: 768px) {
+  .offers-list {
+    flex-direction: row; } }
 
 .product {
   display: flex;
@@ -507,6 +518,10 @@
 * {
   box-sizing: border-box; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 body {
   font-family: "Open Sans Bold", Arial, sans-serif;
   font-size: 20px;
@@ -549,6 +564,8 @@ body {
     padding: 0;
     border: none; }
     .site-list__item:nth-child(1) {
+      padding: 0; }
+    .site-list__item:nth-child(1) {
       margin-right: 37px; } }
 
 @media (min-width: 1200px) {
@@ -560,10 +577,12 @@ body {
     font-family: "Open Sans Bold", Arial, sans-serif;
     font-size: 17px;
     line-height: 24px;
-    flex-basis: 40%; }
+    flex-basis: 40%;
+    margin-right: 45px; }
   .site-list__item {
     padding: 30px 0;
-    flex-basis: 50%; }
+    flex-basis: 50%;
+    min-width: 216px; }
     .site-list__item:nth-child(1) {
       padding: 30px 0;
       margin-right: 0;

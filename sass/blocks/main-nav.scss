@@ -8,7 +8,6 @@
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-top: 20px;
 }
 .main-nav__list{
   text-align: center;
@@ -30,7 +29,7 @@
   width: 23px;
   height: 20px;
   position: absolute;
-  top: 28px;
+  top: 10px;
   right: 29px;
   border: none;
   display: block;
@@ -50,7 +49,7 @@
           0 16px 0 0 $black-color;
 }
 .main-nav--opened .main-nav__toggle{
-  top: 28px;
+  top: 10px;
   right: 29px;
 
   &::before,
@@ -131,12 +130,12 @@
 }
 @media (min-width: $desktop-width) {
   .main-nav{
-    width: 1200px;
+    padding-left: 70px;
     flex-wrap: nowrap;
     border-bottom: 1px solid #ececec;
   }
   .main-nav__wrapper{
-    width: 1050px;
+
   }
   .page-header__logo{
     background-image: url("../img/logo.svg");
@@ -151,5 +150,6 @@
     padding-left: 0;
     padding-top: 0;
     border: none;
+    margin-right: 51px;
   }
 }
