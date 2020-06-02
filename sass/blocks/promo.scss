@@ -2,8 +2,8 @@
 .promo{
   background-image: url("../img/promo-background.jpg");
   background-repeat: no-repeat;
-  background-size: 178% ;
-  background-position: -125px -8px;
+  background-size: 573px auto;
+  background-position: center -8%;
   padding-top: 58px;
 }
 .promo-list{
@@ -19,7 +19,7 @@
   text-align: center;
   margin: 0;
   margin-bottom: 123px;
-  padding: 0 10px;
+  padding: 0 38px;
 
 }
 @media (min-width: $tablet-width) {

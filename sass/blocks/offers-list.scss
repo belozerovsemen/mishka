@@ -1,20 +1,52 @@
 @import "variables";
 @import "mixins";
+
 .offers-list{
   list-style: none;
-  color: #ffffff;
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
-  @import fonts-1(19px, 24px);
+  @include fonts-1(19px, 24px);
 }
 .offers-list__item{
   background-color: $akvamarin-color;
-  padding: 25px 182px 17px 30px;
+  min-height: 102px;
+  &:nth-child(2){
+    svg{
+      top: 18px;
+      right: 27px;
+    }
+  }
 }
+
 .offers-list__item--toys{
   background-color: $akvamarin-color-2;
+}
+.offers-list__link{
+  display: block;
+  padding: 25px 182px 30px 30px;
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  svg {
+    position: absolute;
+    top: 22px;
+    right: 35px;
+    opacity: 0.8;
+
+    .st0 {
+      fill: $akvamarin-color-3;
+    }
+  }
+  &:hover{
+    svg{
+      opacity: 1;
+    }
+  }
+  &:active{
+    opacity: 0.1;
+  }
 }
 @media (min-width: $tablet-width) {
   .offers-list {
