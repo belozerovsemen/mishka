@@ -130,12 +130,13 @@
 }
 @media (min-width: $desktop-width) {
   .main-nav{
-    padding-left: 70px;
+    padding-left: 19px;
     flex-wrap: nowrap;
     border-bottom: 1px solid #ececec;
   }
   .main-nav__wrapper{
-
+    width: 1150px;
+    margin: 0 auto;
   }
   .page-header__logo{
     background-image: url("../img/logo.svg");
@@ -150,6 +151,6 @@
     padding-left: 0;
     padding-top: 0;
     border: none;
-    margin-right: 51px;
+    margin-right: 52px;
   }
 }

@@ -51,5 +51,27 @@
 @media (min-width: $tablet-width) {
   .offers-list {
     flex-direction: row;
+    @include fonts-1(20px, 30px);
+  }
+  .offers-list__item{
+    flex-basis: 50%;
+    &:nth-child(2){
+      svg{
+          top: 29px;
+          right: 34px;
+      }
+    }
+  }
+  .offers-list__link{
+    padding: 27px 182px 30px 35px;
+    svg{
+      top: 29px;
+
+    }
+  }
+}
+@media (min-width: $desktop-width){
+  .offers-list__link{
+    padding-right: 305px;
   }
 }

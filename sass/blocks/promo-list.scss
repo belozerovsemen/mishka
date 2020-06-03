@@ -1,0 +1,24 @@
+@import "variables";
+
+.promo-list{
+  font-size: 15px;
+  display: none;
+}
+.promo-list__item{
+  a:hover{
+    opacity: 0.6;
+  }
+  a:active{
+    opacity: 0.1;
+  }
+}
+@media (min-width: $desktop-width){
+  .promo-list{
+    display: flex;
+  }
+  .promo-list__item{
+    &:nth-child(1){
+      margin-right: 59px;
+    }
+  }
+}

@@ -6,10 +6,7 @@
   background-position: center -8%;
   padding-top: 58px;
 }
-.promo-list{
-  font-size: 15px;
-  display: none;
-}
+
 .promo__delivery{
   @include fonts-2(15px,24px);
   display: none;
@@ -23,23 +20,47 @@
 
 }
 @media (min-width: $tablet-width) {
+  .promo{
+    padding-top: 0;
+    margin-top: -40px;
+    background-size: 149% auto;
+  }
+  .promo__wrapper{
+    width: 668px;
+    margin: 0 auto;
+  }
   .promo__title {
     @include heading(43px, 50px);
     text-align: center;
+    margin-top: 96px;
+    margin-bottom: 374px;
   }
   .promo__delivery{
     display: block;
     margin-left: 436px;
-    margin-top: -24px;
+    margin-top: 16px;
   }
 }
 @media (min-width: $desktop-width) {
   .main-nav--promo{
+    margin-bottom: 113px;
+    padding-left: 0;
     border: none;
+  }
+  .promo{
+    margin-top: 0;
+    background-size: 92% auto;
+    background-position: center 15%;
+  }
+
+  .promo__wrapper{
+    width: 1050px;
+    padding-top: 14px;
   }
    .promo__title{
      @include heading(53px, 57px);
      text-align: center;
+     margin-bottom: 359px;
    }
   .promo__delivery{
     margin: 0;
