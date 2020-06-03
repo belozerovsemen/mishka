@@ -4,22 +4,44 @@
 .product{
   display: flex;
   flex-direction: column;
+  padding: 6px 30px 35px 30px;
 }
 .product__of-week{
   font-size: 17px;
   line-height: 20px;
   color: $akvamarin-color;
   text-transform: uppercase;
+  order: 2;
+  margin-bottom: 23px;
  }
 .product__title{
   @include heading(25px, 30px);
-
+  order: 1;
+  margin-bottom: 5px;
+}
+.product__wrapper{
+  order: 3;
+}
+.product__image{
+  order: 4;
 }
 .product__description{
-  @include fonts-2;
+  @include fonts-2(15px, 24px);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 13px;
 }
 .product__characteristics{
   @include fonts-2(15px,20px);
+  tr{
+    display: flex;
+    border-bottom: 1px solid #ececec;
+  }
+  td{
+    padding: 9px 0;
+    margin-right: 56px;
+    display: block;
+  }
 }
 .product__price{
   @include fonts-1(20px,24px);

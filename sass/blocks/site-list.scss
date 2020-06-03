@@ -4,15 +4,18 @@
   &:nth-child(1){
     padding: 27px 60px 24px 42px;
   }
-  a:hover{
-    opacity: 0.6;
-  }
-  a:active{
+}
+.site-list__link{
+  &:hover{
+  opacity: 0.6;
+}
+  &:active{
     opacity: 0.1;
   }
 }
 @media (min-width: $tablet-width) {
   .site-list {
+    z-index: 1;
     display: flex;
     order: 3;
     padding-left: 174px;
