@@ -78,6 +78,8 @@
 .product__order{
   @include fonts-1(17px, 20px);
   @include button;
+  min-width: 260px;
+  margin: 0 auto;
 }
 @media (min-width: $tablet-width){
   .product{
@@ -137,11 +139,13 @@
     &.button{
       padding: 14px 100px;
     }
+
   }
 }
 @media (min-width: $desktop-width){
   .product{
-    margin-top: -16px;
+    margin-top: -35px;
+    background-size: 1178px;
   }
   .product__title{
     @include heading(53px, 57px);

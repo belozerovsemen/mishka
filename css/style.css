@@ -262,6 +262,7 @@
 
 @media (min-width: 1200px) {
   .offers-list__link {
+    padding: 27px 182px 48px 35px;
     padding-right: 305px; } }
 
 .product {
@@ -344,7 +345,9 @@
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
-  color: #444444; }
+  color: #444444;
+  min-width: 260px;
+  margin: 0 auto; }
 
 @media (min-width: 768px) {
   .product {
@@ -398,7 +401,8 @@
 
 @media (min-width: 1200px) {
   .product {
-    margin-top: -16px; }
+    margin-top: -35px;
+    background-size: 1178px; }
   .product__title {
     font-size: 53px;
     line-height: 57px;
@@ -426,22 +430,65 @@
     margin-left: 141px;
     margin-bottom: 94px; } }
 
-.about-us {
+.about-us__container {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 26px; }
 
 .about-us__title {
   font-size: 25px;
   line-height: 30px;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 85px; }
 
 .about-us__list {
   list-style: none;
   font-family: "Open Sans Bold", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 22px;
+  font-size: 17px;
+  line-height: 20px;
   margin: 0;
   padding: 0; }
+
+.about-us__item {
+  margin-bottom: 84px;
+  padding-right: 63px;
+  position: relative; }
+  .about-us__item::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/flower-icon.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 40px;
+    top: -54px;
+    left: 7px; }
+  .about-us__item:nth-last-child(1) {
+    margin-bottom: 0; }
+    .about-us__item:nth-last-child(1)::before {
+      background-image: url("../img/gift-icon.svg");
+      left: 2px;
+      top: -56px; }
+  .about-us__item:nth-child(2) {
+    padding-right: 38px; }
+    .about-us__item:nth-child(2)::before {
+      background-image: url("../img/money-icon.svg");
+      width: 47px;
+      left: 0; }
+  .about-us__item:nth-child(3)::before {
+    background-image: url("../img/heart-icon.svg");
+    top: -50px; }
+  .about-us__item:nth-child(4) {
+    padding-right: 5px; }
+    .about-us__item:nth-child(4)::before {
+      background-image: url("../img/roll-icon.svg"); }
+  .about-us__item:nth-child(5) {
+    padding-right: 0; }
+    .about-us__item:nth-child(5)::before {
+      background-image: url("../img/rocket-icon.svg");
+      width: 56px;
+      left: -6px; }
 
 @media (min-width: 768px) {
   .about-us__title {

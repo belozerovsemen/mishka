@@ -2,17 +2,76 @@
 @import "mixins";
 
 .about-us{
+
+}
+.about-us__container{
   display: flex;
   flex-direction: column;
+  padding: 30px;
+  padding-top: 26px;
 }
 .about-us__title{
   @include heading(25px, 30px);
+  margin: 0;
+  margin-bottom: 85px;
 }
 .about-us__list{
   list-style: none;
-  @include fonts-1(20px,22px);
+  @include fonts-1(17px, 20px);
   margin: 0;
   padding: 0;
+}
+.about-us__item{
+  margin-bottom: 84px;
+  padding-right: 63px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    background-image: url("../img/flower-icon.svg");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 40px;
+    top: -54px;
+    left: 7px;
+  }
+  &:nth-last-child(1){
+    margin-bottom: 0;
+    &::before{
+      background-image: url("../img/gift-icon.svg");
+      left: 2px;
+      top: -56px;
+    }
+  }
+  &:nth-child(2){
+    padding-right: 38px;
+    &::before{
+      background-image: url("../img/money-icon.svg");
+      width: 47px;
+      left: 0;
+
+    }
+  }
+  &:nth-child(3){
+    &::before{
+      background-image: url("../img/heart-icon.svg");
+      top: -50px;
+    }
+  }
+  &:nth-child(4){
+    padding-right: 5px;
+    &::before{
+      background-image: url("../img/roll-icon.svg");
+    }
+  }
+  &:nth-child(5){
+    padding-right: 0;
+    &::before{
+      background-image: url("../img/rocket-icon.svg");
+      width: 56px;
+      left: -6px;
+    }
+  }
 }
 @media (min-width: $tablet-width){
   .about-us__title{
