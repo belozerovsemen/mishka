@@ -265,6 +265,11 @@
     padding-right: 305px; } }
 
 .product {
+  background-image: url("../img/zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.product__container {
   display: flex;
   flex-direction: column;
   padding: 6px 30px 35px 30px; }
@@ -275,7 +280,8 @@
   color: #63d1bb;
   text-transform: uppercase;
   order: 2;
-  margin-bottom: 23px; }
+  margin-bottom: 23px;
+  font-weight: normal; }
 
 .product__title {
   font-size: 25px;
@@ -285,10 +291,18 @@
   margin-bottom: 5px; }
 
 .product__wrapper {
-  order: 3; }
+  order: 3;
+  margin-bottom: 27px; }
 
 .product__image {
-  order: 4; }
+  order: 4;
+  margin-bottom: 27px; }
+
+.product__wrapper--bottom {
+  order: 5;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px; }
 
 .product__description {
   font-size: 15px;
@@ -296,7 +310,7 @@
   font-family: "Open Sans Regular", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  margin-bottom: 13px; }
+  margin-bottom: 16px; }
 
 .product__characteristics {
   font-size: 15px;
@@ -305,15 +319,24 @@
   .product__characteristics tr {
     display: flex;
     border-bottom: 1px solid #ececec; }
+    .product__characteristics tr:nth-child(2) .product__field {
+      margin-right: 32px; }
+    .product__characteristics tr:nth-child(3) .product__field {
+      margin-right: 39px; }
   .product__characteristics td {
     padding: 9px 0;
-    margin-right: 56px;
     display: block; }
+
+.product__field {
+  margin-right: 56px; }
 
 .product__price {
   font-family: "Open Sans Bold", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 24px; }
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #444444; }
 
 .product__order {
   font-family: "Open Sans Bold", Arial, sans-serif;
@@ -325,19 +348,83 @@
 
 @media (min-width: 768px) {
   .product {
-    flex-direction: row; }
+    margin-top: -10px;
+    z-index: 1;
+    position: relative;
+    background-image: url("../img/promo-line.svg"), url("../img/zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position: top, bottom; }
+  .product__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 668px;
+    padding: 0;
+    margin: 0 auto;
+    padding-top: 58px; }
+  .product__of-week {
+    order: 2;
+    margin-bottom: 0;
+    flex-basis: 10%;
+    text-align: center;
+    margin-top: 6px; }
   .product__title {
     font-size: 43px;
     line-height: 50px;
-    font-weight: normal; }
-  .product__of-week {
-    order: 1; } }
+    font-weight: normal;
+    margin: 0;
+    margin-right: 143px;
+    margin-bottom: 57px; }
+  .product__wrapper {
+    flex-basis: 50%; }
+  .product__wrapper--bottom {
+    margin-top: -139px;
+    margin-bottom: 69px; }
+  .product__description {
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    margin-top: -9px;
+    padding-right: 41px;
+    margin-bottom: 37px; }
+  .product__image {
+    flex-basis: 50%; }
+  .product__price {
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 34px; }
+  .product__order.button {
+    padding: 14px 100px; } }
 
 @media (min-width: 1200px) {
+  .product {
+    margin-top: -16px; }
   .product__title {
     font-size: 53px;
     line-height: 57px;
-    font-weight: normal; } }
+    font-weight: normal;
+    z-index: 1;
+    position: relative; }
+  .product__of-week {
+    margin-top: 11px;
+    margin-right: 36px;
+    order: 1; }
+  .product__container {
+    width: 1050px;
+    padding-top: 141px;
+    padding-left: 33px; }
+  .product__image {
+    margin-top: -166px;
+    margin-left: auto;
+    flex-basis: 52%; }
+  .product__wrapper {
+    margin-left: 140px;
+    flex-basis: 33%; }
+  .product__description {
+    margin-bottom: 48px; }
+  .product__wrapper--bottom {
+    margin-left: 141px;
+    margin-bottom: 94px; } }
 
 .about-us {
   display: flex;
@@ -614,6 +701,16 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.button {
+  display: block;
+  padding: 14px 86px;
+  border: 2px solid #444444; }
+  .button:hover {
+    background-color: #444444;
+    color: #ffffff; }
+  .button:active {
+    color: #7c7c7c; }
 
 .site-list__item {
   padding: 28px 60px 24px 46px;
