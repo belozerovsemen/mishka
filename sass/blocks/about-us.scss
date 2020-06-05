@@ -74,22 +74,71 @@
   }
 }
 @media (min-width: $tablet-width){
+  .about-us__container{
+    padding: 0;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 48px;
+  }
   .about-us__title{
     @include heading(43px, 50px);
+    margin-bottom: 104px;
   }
   .about-us__list{
     display: flex;
     flex-wrap: wrap;
+    @include fonts-1(20px, 22px);
   }
   .about-us__item{
     flex-basis: 50%;
+    margin-bottom: 110px;
+    &:nth-child(1){
+      order:1;
+      padding-right: 105px;
+    }
+    &:nth-child(2){
+      order: 3;
+      padding-right: 73px;
+    }
+    &:nth-child(3){
+      order: 5;
+      padding-right: 98px;
+      margin-bottom: 0;
+    }
+    &:nth-child(4){
+      order: 2;
+      padding-right: 33px;
+    }
+    &:nth-child(5){
+      order: 4;
+    }
+    &:nth-child(6){
+      order: 6;
+    }
   }
 }
 @media (min-width: $desktop-width){
+  .about-us__container{
+    width: 1050px;
+    margin: 0 auto;
+    padding: 60px 176px 92px 174px;
+  }
   .about-us__title{
     @include heading(53px, 57px);
   }
   .about-us__item{
     flex-basis: 50%;
+    &:nth-child(1){
+      padding-right: 120px;
+    }
+    &:nth-child(2){
+      padding-right: 89px;
+    }
+    &:nth-child(3){
+      padding-right: 109px;
+    }
+    &:nth-child(4){
+      padding-right: 53px;
+    }
   }
 }

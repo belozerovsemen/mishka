@@ -3,29 +3,107 @@
 
 
 .reviews{
+  background-image: url("../img/zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+.reviews__container{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 22px;
+}
+.reviews__slider{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 33px;
+}
+.reviews__item{
   display: flex;
   flex-direction: column;
 }
+
 .reviews__title{
   @include heading(25px, 30px);
+  margin: 0;
+  margin-bottom: 23px;
 }
 .reviews__write{
   @include button;
   order: 5;
+  &.button{
+    padding: 14px 74px;
+  }
 }
 .reviews__description{
-  @include fonts-2;
+  @include fonts-2(15px, 30px);
+  margin: 0;
+  margin-bottom: 27px;
 }
 .reviews__username{
   @include fonts-1(17px, 24px);
+  margin-bottom: 6px;
+  font-weight: normal;
 }
 .reviews__login{
   @include fonts-2(17px, 24px);
 }
-.reviews__slider{
+.reviews__wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px;
+}
+.reviews__controls{
   list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 36px;
+}
+.reviews__item--controls{
+  border: 1px solid #ececec;
+  &:nth-child(1){
+    border-right: none;
+  }
+}
+.reviews__button{
+  border: none;
+  background-color: transparent;
+  width: 130px;
+  height: 51px;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.5;
+  }
+  &:active{
+    opacity: 0.1;
+  }
+}
+.reviews__button--left{
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: 54px;
+  background-position: 35px;
+}
+.reviews__button--right{
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 54px;
+  background-position: 35px;
 }
 @media (min-width: $tablet-width){
+  .reviews{
+    background-image:
+            url("../img/reviews-image.jpg"),
+            url("../img/zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position:
+            center,
+            bottom;
+
+  }
   .reviews__write{
     order: -1;
   }

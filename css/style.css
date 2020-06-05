@@ -491,58 +491,164 @@
       left: -6px; }
 
 @media (min-width: 768px) {
+  .about-us__container {
+    padding: 0;
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 48px; }
   .about-us__title {
     font-size: 43px;
     line-height: 50px;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-bottom: 104px; }
   .about-us__list {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 20px;
+    line-height: 22px; }
   .about-us__item {
-    flex-basis: 50%; } }
+    flex-basis: 50%;
+    margin-bottom: 110px; }
+    .about-us__item:nth-child(1) {
+      order: 1;
+      padding-right: 105px; }
+    .about-us__item:nth-child(2) {
+      order: 3;
+      padding-right: 73px; }
+    .about-us__item:nth-child(3) {
+      order: 5;
+      padding-right: 98px;
+      margin-bottom: 0; }
+    .about-us__item:nth-child(4) {
+      order: 2;
+      padding-right: 33px; }
+    .about-us__item:nth-child(5) {
+      order: 4; }
+    .about-us__item:nth-child(6) {
+      order: 6; } }
 
 @media (min-width: 1200px) {
+  .about-us__container {
+    width: 1050px;
+    margin: 0 auto;
+    padding: 60px 176px 92px 174px; }
   .about-us__title {
     font-size: 53px;
     line-height: 57px;
     font-weight: normal; }
   .about-us__item {
-    flex-basis: 50%; } }
+    flex-basis: 50%; }
+    .about-us__item:nth-child(1) {
+      padding-right: 120px; }
+    .about-us__item:nth-child(2) {
+      padding-right: 89px; }
+    .about-us__item:nth-child(3) {
+      padding-right: 109px; }
+    .about-us__item:nth-child(4) {
+      padding-right: 53px; } }
 
 .reviews {
+  background-image: url("../img/zigzag-line.svg");
+  background-repeat: no-repeat;
+  background-position: bottom; }
+
+.reviews__container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  padding-top: 22px; }
+
+.reviews__slider {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-bottom: 33px; }
+
+.reviews__item {
   display: flex;
   flex-direction: column; }
 
 .reviews__title {
   font-size: 25px;
   line-height: 30px;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 23px; }
 
 .reviews__write {
   text-decoration: none;
   text-transform: uppercase;
   color: #444444;
   order: 5; }
+  .reviews__write.button {
+    padding: 14px 74px; }
 
 .reviews__description {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
-  font-family: "Open Sans Regular", Arial, sans-serif; }
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 27px; }
 
 .reviews__username {
   font-family: "Open Sans Bold", Arial, sans-serif;
   font-size: 17px;
-  line-height: 24px; }
+  line-height: 24px;
+  margin-bottom: 6px;
+  font-weight: normal; }
 
 .reviews__login {
   font-size: 17px;
   line-height: 24px;
   font-family: "Open Sans Regular", Arial, sans-serif; }
 
-.reviews__slider {
-  list-style: none; }
+.reviews__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 17px; }
+
+.reviews__controls {
+  list-style: none;
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+  margin-bottom: 36px; }
+
+.reviews__item--controls {
+  border: 1px solid #ececec; }
+  .reviews__item--controls:nth-child(1) {
+    border-right: none; }
+
+.reviews__button {
+  border: none;
+  background-color: transparent;
+  width: 130px;
+  height: 51px;
+  cursor: pointer; }
+  .reviews__button:hover {
+    opacity: 0.5; }
+  .reviews__button:active {
+    opacity: 0.1; }
+
+.reviews__button--left {
+  background-image: url("../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: 54px;
+  background-position: 35px; }
+
+.reviews__button--right {
+  background-image: url("../img/arrow-right.svg");
+  background-repeat: no-repeat;
+  background-size: 54px;
+  background-position: 35px; }
 
 @media (min-width: 768px) {
+  .reviews {
+    background-image: url("../img/reviews-image.jpg"), url("../img/zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position: center, bottom; }
   .reviews__write {
     order: -1; }
   .reviews__title {
@@ -752,7 +858,9 @@ body {
 .button {
   display: block;
   padding: 14px 86px;
-  border: 2px solid #444444; }
+  border: 2px solid #444444;
+  min-width: 260px;
+  margin: 0 auto; }
   .button:hover {
     background-color: #444444;
     color: #ffffff; }
