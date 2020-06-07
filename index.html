@@ -289,19 +289,19 @@
 
 <script>
     function initMap() {
-        var element = document.getElementById('map');
-        var options = {
+        let element = document.getElementById('map');
+        let options = {
             zoom: 17,
             center: {lat: 59.938635, lng: 30.323118}
         };
-        var myMap = new google.maps.Map(element, options);
+        let myMap = new google.maps.Map(element, options);
 
         addMarker({lat: 59.938635, lng: 30.323118});
         function addMarker(coordinates){
-            var marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: coordinates,
                 map: myMap,
-                icon: 'http://test.siliconrus.ru/map-pin.png'
+                icon: 'https://belozerovsemen.github.io/mishka/img/map-pin.png'
             });
         }
     }
