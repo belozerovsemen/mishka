@@ -224,18 +224,24 @@
            </div>
     </section>
     <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__wrapper">
+        <div class="contacts__container">
+         <h2 class="contacts__title">Контакты</h2>
+         <div class="contacts__wrapper">
             <span class="contacts__email">e-mail:</span>
-            <p class="contacts__email">info@mimimishkashop.ru</p>
-        </div>
-        <div class="contacts__wrapper">
+            <a class="contacts__email contacts__email--link" href="#">info@mimimishkashop.ru</a>
+         </div>
+         <div class="contacts__wrapper">
             <span class="contacts__address">адрес:</span>
-            <p class="contacts__address">г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101</p>
+            <p class="contacts__address">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</p>
+         </div>
         </div>
-        <a class="contacts__write-us button" href="#">Напишите нам</a>
-        <img class="contacts__image " src="img/map-preview.jpg"
-             alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101" width="525" height="457">
+        <div class="contacts__map">
+            <a class="contacts__write-us button" href="#">Напишите нам</a>
+            <div id="map"></div>
+            <img class="contacts__image " src="img/map-preview.jpg"
+                 alt="г. Санкт-Петербург,ул. Большая Конюшенная, д. 19/8, офис 101" width="525" height="457">
+        </div>
+
     </section>
     </div>
 </main>
@@ -276,6 +282,29 @@
             navMain.classList.remove('main-nav--opened');
         }
     });
+
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu4h_KgZ4s4uXVtog7YjHKjm0N5SMnM08&callback=initMap">
+</script>
+
+<script>
+    function initMap() {
+        var element = document.getElementById('map');
+        var options = {
+            zoom: 17,
+            center: {lat: 59.938635, lng: 30.323118}
+        };
+        var myMap = new google.maps.Map(element, options);
+
+        addMarker({lat: 59.938635, lng: 30.323118});
+        function addMarker(coordinates){
+            var marker = new google.maps.Marker({
+                position: coordinates,
+                map: myMap,
+                icon: 'http://test.siliconrus.ru/map-pin.png'
+            });
+        }
+    }
 </script>
 </body>
 </html>

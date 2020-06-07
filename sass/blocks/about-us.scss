@@ -74,6 +74,9 @@
   }
 }
 @media (min-width: $tablet-width){
+  .about-us{
+    margin-bottom: 85px;
+  }
   .about-us__container{
     padding: 0;
     width: 668px;
@@ -118,6 +121,9 @@
   }
 }
 @media (min-width: $desktop-width){
+  .about-us{
+    margin-bottom: 0;
+  }
   .about-us__container{
     width: 1050px;
     margin: 0 auto;

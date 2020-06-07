@@ -491,6 +491,8 @@
       left: -6px; }
 
 @media (min-width: 768px) {
+  .about-us {
+    margin-bottom: 85px; }
   .about-us__container {
     padding: 0;
     width: 668px;
@@ -529,6 +531,8 @@
       order: 6; } }
 
 @media (min-width: 1200px) {
+  .about-us {
+    margin-bottom: 0; }
   .about-us__container {
     width: 1050px;
     margin: 0 auto;
@@ -648,63 +652,205 @@
   .reviews {
     background-image: url("../img/reviews-image.jpg"), url("../img/zigzag-line.svg");
     background-repeat: no-repeat;
-    background-position: center, bottom; }
+    background-position: 0 0, bottom;
+    background-size: 351px, 807px;
+    padding-top: 77px;
+    position: relative; }
+  .reviews__container {
+    flex-direction: row;
+    width: 668px;
+    margin: 0 auto;
+    padding: 0; }
+  .reviews__slider {
+    margin-bottom: 133px; }
+  .reviews__description {
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    width: 642px;
+    margin-bottom: 58px; }
+  .reviews__username {
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 24px; }
   .reviews__write {
     order: -1; }
+    .reviews__write.button {
+      margin-bottom: 224px;
+      min-width: 175px;
+      padding: 14px 26px;
+      padding-left: 37px;
+      font-family: "Open Sans Bold", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 20px; }
   .reviews__title {
     font-size: 43px;
     line-height: 50px;
-    font-weight: normal; } }
+    font-weight: normal;
+    margin-bottom: 49px; }
+  .reviews__wrapper {
+    position: absolute;
+    right: 40px; }
+  .reviews__item--controls {
+    border: none; }
+  .reviews__button {
+    width: 100px;
+    padding: 0; }
+  .reviews__button--right {
+    background-position: 19px; } }
 
 @media (min-width: 1200px) {
+  .reviews {
+    width: 1050px;
+    margin: 0 auto;
+    padding-top: 60px;
+    background-size: 351px, 1051px; }
+  .reviews__container {
+    width: 875px;
+    padding-left: 85px;
+    padding-top: 7px; }
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
-    font-weight: normal; } }
+    font-weight: normal; }
+  .reviews__description {
+    width: 768px;
+    margin-bottom: 39px; }
+  .reviews__slider {
+    margin-bottom: 185px; }
+  .reviews__wrapper {
+    right: -12px;
+    top: 77px; }
+  .reviews__write.button {
+    margin-bottom: 177px; } }
 
 .contacts {
   display: flex;
   flex-direction: column; }
 
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 35px;
+  margin-bottom: 36px; }
+
 .contacts__title {
   font-size: 18px;
   line-height: 30px;
-  font-weight: normal; }
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 26px; }
 
 .contacts__wrapper {
-  display: flex; }
+  display: flex;
+  align-items: baseline; }
+  .contacts__wrapper:nth-of-type(1) {
+    margin-bottom: 30px; }
 
 .contacts__email {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
-  font-family: "Open Sans Regular", Arial, sans-serif; }
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  margin: 0; }
+  .contacts__email:nth-child(1) {
+    margin-right: 30px; }
+
+.contacts__email--link {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px solid #63d1bb; }
 
 .contacts__address {
-  font-size: 17px;
+  font-size: 15px;
   line-height: 30px;
-  font-family: "Open Sans Regular", Arial, sans-serif; }
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  margin: 0; }
+  .contacts__address:nth-child(1) {
+    margin-right: 30px; }
+  .contacts__address:nth-child(2) {
+    width: 147px; }
+
+.contacts__map {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 44px; }
+  .contacts__map::before {
+    content: "";
+    position: absolute;
+    top: 150px;
+    left: 142px;
+    width: 85px;
+    height: 101px;
+    background-image: url("../img/map-pin.svg");
+    background-repeat: no-repeat; }
+
+#map {
+  width: 100%;
+  height: 456px;
+  z-index: 1; }
+
+.contacts__image {
+  width: 100%;
+  height: 456px;
+  margin-top: -456px;
+  margin-bottom: 40px; }
 
 .contacts__write-us {
   text-decoration: none;
   text-transform: uppercase;
   color: #444444;
   font-family: "Open Sans Bold", Arial, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   line-height: 20px;
   order: 5; }
+  .contacts__write-us.button {
+    padding: 14px 50px; }
 
 @media (min-width: 768px) {
-  .contacts {
+  .contacts__container {
     flex-direction: row;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    width: 668px;
+    padding-top: 61px;
+    position: relative;
+    margin-bottom: 56px; }
+    .contacts__container::before {
+      content: "";
+      position: absolute;
+      width: 53px;
+      height: 84px;
+      background-image: url("../img/flag-icon.svg");
+      background-repeat: no-repeat;
+      right: -3px;
+      top: 46px; }
+  .contacts__image {
+    margin-bottom: 56px; }
   .contacts__title {
     font-size: 43px;
     line-height: 50px;
-    font-weight: normal; }
+    font-weight: normal;
+    margin-right: 129px;
+    margin-bottom: 50px; }
   .contacts__wrapper {
     flex-basis: 50%; }
-  .contacts__image {
-    flex-basis: 100%; } }
+  .contacts__map {
+    width: 100%; }
+  .contacts__email {
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Open Sans Regular", Arial, sans-serif; }
+  .contacts__address {
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Open Sans Regular", Arial, sans-serif; }
+    .contacts__address:nth-child(2) {
+      width: 100%; }
+  .contacts__write-us.button {
+    min-width: 228px;
+    padding: 14px 35px; } }
 
 @media (min-width: 1200px) {
   .contacts__title {
