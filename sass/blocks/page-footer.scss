@@ -5,15 +5,79 @@
   display: flex;
   flex-direction: column;
 }
+.page-footer__logo{
+  display: none;
+}
+.page-footer__social{
+  width: 260px;
+  margin: 0 auto;
+  padding: 50px;
+  padding-top: 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #ececec;;
+}
 .social__list{
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+}
+.social__item{
+  margin-right: 40px;
+  &:nth-child(3){
+    margin-right: 0;
+  }
+}
+.page-footer__copyright{
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  padding-left: 38px;
+  margin-bottom: 15px;
+  svg{
+    &:hover{
+      .st1{
+        fill: $akvamarin-color-2;
+        stroke: $akvamarin-color-2;
+      }
+    }
+    &:active{
+      opacity: 0.3;
+    }
+  }
 }
 .copyright__text{
   @include fonts-1(19px, 18px);
+  font-weight: normal;
+  margin-right: 25px;
+  text-decoration: none;
+  color: $black-color;
+  &:active{
+    opacity: 0.3;
+  }
 }
+.copyright__text:hover +  svg  .st1{
+  fill: $akvamarin-color-2;
+  stroke: $akvamarin-color-2;
+}
+.copyright__text:active +  svg {
+  opacity: 0.3;
+}
+
 .social__link{
   text-decoration: none;
+  &:hover{
+    svg{
+      .st0{
+        fill: $akvamarin-color;
+      }
+    }
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 @media (min-width: $tablet-width){
   .page-footer{
