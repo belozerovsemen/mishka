@@ -2,8 +2,13 @@
 @import "mixins";
 
 .page-footer{
+  background-color: $grey-background;
+}
+.footer__container{
   display: flex;
   flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
 }
 .page-footer__logo{
   display: none;
@@ -14,7 +19,7 @@
   padding: 50px;
   padding-top: 24px;
   padding-bottom: 22px;
-  border-bottom: 1px solid #ececec;;
+  border-bottom: 1px solid #e5e5e5;
 }
 .social__list{
   list-style: none;
@@ -80,7 +85,49 @@
   }
 }
 @media (min-width: $tablet-width){
-  .page-footer{
+  .footer__container{
+    width: 668px;
     flex-direction: row;
+    padding-top: 37px;
+    padding-bottom: 31px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .page-footer__logo{
+    display: block;
+    margin-right: 79px;
+    &:hover{
+      opacity: 0.6;
+    }
+    &:active{
+      opacity: 0.1;
+    }
+  }
+  .page-footer__social{
+    padding-right: 0;
+    padding-left: 72px;
+    border-bottom: none;
+  }
+  .page-footer__copyright{
+    padding-left: 61px;
+  }
+}
+@media(min-width: $desktop-width){
+  .page-footer{
+    width: 1250px;
+    margin: 0 auto;
+  }
+  .footer__container{
+    width: 1050px;
+  }
+  .page-footer__logo{
+    margin-right: 266px;
+  }
+  .page-footer__social{
+    margin: 0;
+    margin-right: 191px;
+  }
+  .page-footer__copyright{
+
   }
 }

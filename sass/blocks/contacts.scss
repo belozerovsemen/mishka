@@ -116,6 +116,7 @@
   }
   .contacts__map{
     width: 100%;
+    margin-bottom: 57px;
   }
   .contacts__email{
     @include fonts-2(17px, 30px);
@@ -142,6 +143,7 @@
     padding-left: 169px;
   }
   .contacts__container{
+    margin-bottom: 236px;
     padding-top: 74px;
     width: 350px;
     &::before{

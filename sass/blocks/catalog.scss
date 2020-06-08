@@ -1,8 +1,17 @@
 @import "variables";
 @import "mixins";
 
+.catalog__container{
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 29px;
+}
 .catalog__list{
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 .catalog__name{
   @include  heading(20px, 24px);
@@ -13,13 +22,12 @@
 .catalog__price{
   @include fonts-1(17px, 24px);
 }
-.catalog__list{
-  display: flex;
-  flex-direction: column;
-}
 .catalog__item{
   display: flex;
   flex-direction: column;
+}
+.catalog__image{
+  
 }
 @media (min-width: $tablet-width){
   .catalog__item{
