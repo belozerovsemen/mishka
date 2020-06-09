@@ -187,6 +187,8 @@
     text-align: center;
     margin-top: 96px;
     margin-bottom: 374px; }
+  .promo__title--catalog {
+    margin-bottom: 78px; }
   .promo__delivery {
     display: block;
     margin-left: 436px;
@@ -1078,9 +1080,20 @@
   opacity: 0.1; }
 
 @media (min-width: 768px) {
+  .catalog {
+    background-image: url("../img/promo-line.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: -10px; }
+  .catalog__container {
+    width: 668px;
+    padding-top: 89px; }
   .catalog__item {
-    flex-direction: row;
-    flex-wrap: wrap; } }
+    flex-direction: row; }
+  .catalog__name {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal; } }
 
 @media (min-width: 1200px) {
   .catalog__list {

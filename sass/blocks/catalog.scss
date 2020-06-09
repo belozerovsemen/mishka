@@ -91,9 +91,21 @@
   }
 }
 @media (min-width: $tablet-width){
+  .catalog{
+    background-image: url("../img/promo-line.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: -10px;
+  }
+  .catalog__container{
+    width: 668px;
+    padding-top: 89px;
+  }
   .catalog__item{
     flex-direction: row;
-    flex-wrap: wrap;
+  }
+  .catalog__name{
+    @include heading(20px, 24px);
   }
 }
 @media (min-width: $desktop-width){
