@@ -30,9 +30,15 @@
     margin-top: -40px;
     background-size: 149% auto;
   }
+  .promo--catalog{
+    padding-bottom: 1px;
+  }
   .promo__wrapper{
     width: 668px;
     margin: 0 auto;
+  }
+  .main-nav--catalog{
+    margin-bottom: 37px;
   }
   .promo__title {
     @include heading(43px, 50px);
@@ -42,6 +48,7 @@
   }
   .promo__title--catalog{
     margin-bottom: 78px;
+    margin-top: 0;
   }
   .promo__delivery{
     display: block;
@@ -60,7 +67,9 @@
     background-size: 1149px auto;
     background-position: center 15%;
   }
-
+  .main-nav--catalog{
+    margin-bottom: 53px;
+  }
   .promo__wrapper{
     width: 1050px;
     padding-top: 14px;
@@ -70,6 +79,9 @@
      text-align: center;
      margin-bottom: 359px;
    }
+  .promo__title--catalog{
+    margin-bottom: 100px;
+  }
   .promo__delivery{
     margin: 0;
   }
