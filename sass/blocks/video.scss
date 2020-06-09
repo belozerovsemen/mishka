@@ -2,9 +2,11 @@
 @import "mixins";
 
 
-.video{
+.video__wrapper{
   display: flex;
   flex-direction: column;
+  width: 260px;
+  margin: 0 auto;
 }
 .video__title{
   @include fonts-1(20px, 24px);
