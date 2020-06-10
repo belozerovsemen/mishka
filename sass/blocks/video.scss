@@ -27,9 +27,22 @@
     background-repeat: no-repeat;
     top: 36px;
     left: 79px;
-    &:hover{
-      width:: 120px;
+  }
+  &:hover{
+    &::before{
+      width: 120px;
       height: 90px;
+      left: 70px;
+      top: 30px;
+    }
+  }
+  &:active{
+    &::before{
+      height: 80px;
+      width: 102px;
+      opacity: 0.6;
+      top: 36px;
+      left: 79px;
     }
   }
 }
@@ -48,7 +61,8 @@
     top: -215px;
     left: 35px;
 }
-  }
+}
+
 
 .video__title{
   @include fonts-1(17px, 24px);
@@ -76,6 +90,13 @@
 @media (min-width: $tablet-width) {
   .video__preview{
     order: -1;
+  }
+  .video__wrapper{
+    width: 668px;
+  }
+  .video__player{
+    width: 668px;
+    height: 456px;
   }
 }
 @media (min-width: $desktop-width) {
