@@ -9,6 +9,7 @@
 .promo--catalog{
   background-image: none;
   background: $grey-background;
+  padding-bottom: 1px;
 }
 .promo__delivery{
   @include fonts-2(15px,24px);
@@ -66,6 +67,10 @@
     margin-top: 0;
     background-size: 1149px auto;
     background-position: center 15%;
+  }
+  .promo--catalog{
+    width: 1150px;
+    margin: 0 auto;
   }
   .main-nav--catalog{
     margin-bottom: 53px;

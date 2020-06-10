@@ -1,22 +1,77 @@
 @import "variables";
 @import "mixins";
 
-
+.video{
+  margin-bottom: 57px;
+}
 .video__wrapper{
   display: flex;
   flex-direction: column;
   width: 260px;
   margin: 0 auto;
+  border: 1px solid #ececec;
 }
+
+.video__player{
+  order: -1;
+  margin-top: 96px;
+  width: 260px;
+  height: 150px;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    height: 80px;
+    width: 102px;
+    background-image: url("../img/video-play-icon.svg");
+    background-repeat: no-repeat;
+    top: 36px;
+    left: 79px;
+    &:hover{
+      width:: 120px;
+      height: 90px;
+    }
+  }
+}
+
+.video__container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 42px;
+    height: 30px;
+    background-image: url("../img/camera-icon.svg");
+    background-repeat: no-repeat;
+    top: -215px;
+    left: 35px;
+}
+  }
+
 .video__title{
-  @include fonts-1(20px, 24px);
+  @include fonts-1(17px, 24px);
+  font-weight: normal;
+  padding: 24px 43px 30px 89px;
+  margin: 0;
+  margin-bottom: 173px;
+  margin-top: -251px;
 }
 .video__description{
-  @include fonts-2(15px, 30px);
+  @include fonts-2(13px, 24px);
+  padding: 0px 34px;
+  margin: 0;
+  margin-bottom: 27px;
 }
 .video__order{
   @include button;
   @include fonts-1(17px, 16px);
+  &.button{
+    margin-bottom: 33px;
+    min-width: 190px;
+    padding: 16px 22px;
+    }
 }
 @media (min-width: $tablet-width) {
   .video__preview{

@@ -99,6 +99,7 @@
           <li class="catalog__item">
               <a href="#">
                   <picture>
+                      <source media="(min-width:1200px)" srcset="img/catalog-image-1.jpg">
                       <source media="(min-width:768px)" srcset="img/catalog-image-1-tablet.jpg">
                       <source media="(min-width:320px)" srcset="img/catalog-image-1-mobile.jpg">
                       <img class="catalog__image" src="img/catalog-image-1.jpg" alt="Зайчик-попрыгайчик" width="315" height="462">
@@ -135,6 +136,8 @@
           <li class="catalog__item">
               <a href="#">
                   <picture>
+                      <source media="(min-width:1200px)" srcset="img/catalog-image-2.jpg">
+                      <source media="(min-width:768px)" srcset="img/catalog-image-2-tablet.jpg">
                       <source media="(min-width:320px)" srcset="img/catalog-image-2-mobile.jpg">
                       <img class="catalog__image" src="img/catalog-image-2.jpg" alt="Корзинка для белья"  width="315" height="462">
                   </picture>
@@ -171,6 +174,8 @@
           <li class="catalog__item">
               <a href="#">
                   <picture>
+                      <source media="(min-width:1200px)" srcset="img/catalog-image-3.jpg">
+                      <source media="(min-width:768px)" srcset="img/catalog-image-3-tablet.jpg">
                       <source media="(min-width:320px)" srcset="img/catalog-image-3-mobile.jpg">
                       <img class="catalog__image" src="img/catalog-image-3.jpg" alt="Большая корзинка для игрушек"  width="315" height="462">
                   </picture>
@@ -209,12 +214,21 @@
       </section>
       <section class="video">
         <div class="video__wrapper">
-          <h3 class="video__title">Процесс производства</h3>
-          <p class="video__description">
-            По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
-          </p>
-          <a href="#" class="video__order button">Сделать заказ</a>
-            <img class="video__preview" src="img/video-preview-image.jpg" alt="Процесс производства">
+          <div class="video__container">
+            <h3 class="video__title">Процесс производства</h3>
+            <p class="video__description">
+              По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+            </p>
+            <a href="#" class="video__order button">Сделать заказ</a>
+           </div>
+           <div class="video__player">
+             <picture>
+               <source media="(min-width:320px)" srcset="img/video-preview-image-mobile.jpg">
+               <img class="video__preview" src="img/video-preview-image.jpg" alt="Процесс производства">
+             </picture>
+           </div>
+
+
         </div>
       </section>
     </main>
