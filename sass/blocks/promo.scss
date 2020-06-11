@@ -6,7 +6,8 @@
   background-position: center -8%;
   padding-top: 58px;
 }
-.promo--catalog{
+.promo--catalog,
+.promo--form{
   background-image: none;
   background: $grey-background;
   padding-bottom: 1px;
@@ -22,8 +23,12 @@
   margin-bottom: 123px;
   padding: 0 38px;
 }
-.promo__title--catalog{
+.promo__title--catalog,
+.promo__title--form{
   margin-bottom: 78px;
+}
+.promo__title--form{
+  padding: 0;
 }
 @media (min-width: $tablet-width) {
   .promo{

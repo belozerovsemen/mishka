@@ -1,22 +1,59 @@
 @import "variables";
 @import "mixins";
 
+.order{
+  padding-top: 20px;
+}
 .order__description{
-  @include fonts-2(17px, 30px);
+  @include fonts-2(13px, 24px);
+  padding: 0 30px;
+  margin: 0;
+  margin-bottom: 24px;
+}
+.order__form{
+  width: 260px;
+  margin: 0 auto;
+  @include fonts-1(17px, 18px);
 }
 .order__item{
   border: none;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  border-top: 1px solid $akvamarin-color;
+}
+.order__radio{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li{
+    padding-left: 59px;
+    padding-top: 35px;
+    position: relative;
+    &:nth-child(2){
+      padding-left: 59px;
+      padding-top: 21px;
+    }
+  }
+}
+.order__radio--indicator{
+  width: 54px;
+  height: 54px;
+  background-image: url("../img/radiobutton.png");
+  background-repeat: no-repeat;
+  position: absolute;
+
+}
+input[type="radio"]{
+  display: none;
 }
 .order__legend{
   @include fonts-1(17px, 16px);
   color: $akvamarin-color;
   text-transform: uppercase;
+  padding-right: 23px;
 }
-.order__form{
-  @include fonts-1(19px, 18px);
-}
+
 @media (min-width: $tablet-width){
   .order__item{
     flex-wrap: wrap;
@@ -31,4 +68,3 @@
   }
 
 }
-

@@ -240,7 +240,11 @@
                 <a href="#" class="video__order button">Сделать заказ</a>
             </div>
             <div class="video__player">
+              <button class="video__button">
+                <span class="visually-hidden">Play</span>
+              </button>
                 <picture>
+                    <source media="(min-width:1200px)" srcset="img/video-preview-image-desktop.jpg">
                     <source media="(min-width:768px)" srcset="img/video-preview-image-tablet.jpg">
                     <source media="(min-width:320px)" srcset="img/video-preview-image-mobile.jpg">
                     <img class="video__preview" src="img/video-preview-image.jpg" alt="Процесс производства">

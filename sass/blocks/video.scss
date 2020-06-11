@@ -18,33 +18,31 @@
   width: 260px;
   height: 150px;
   position: relative;
-  &::before{
-    content: "";
-    position: absolute;
-    height: 80px;
-    width: 102px;
-    background-image: url("../img/video-play-icon.svg");
-    background-repeat: no-repeat;
-    top: 36px;
-    left: 79px;
-  }
+}
+.video__button{
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  height: 80px;
+  width: 102px;
+  background-image: url("../img/video-play-icon.svg");
+  background-repeat: no-repeat;
+  top: 36px;
+  left: 79px;
   &:hover{
-    &::before{
       width: 120px;
       height: 90px;
       left: 70px;
       top: 30px;
-    }
-  }
+}
   &:active{
-    &::before{
       height: 80px;
       width: 102px;
       opacity: 0.6;
       top: 36px;
       left: 79px;
     }
-  }
 }
 
 .video__container{
@@ -97,10 +95,83 @@
   .video__player{
     width: 668px;
     height: 456px;
+    margin-top: 0;
   }
-}
+  .video__container{
+    &::before{
+      top: 30px;
+      left: 42px;
+    }
+  }
+  .video__title{
+    margin-top: 0;
+    margin-bottom: 0;
+    @include fonts-1(20px, 24px);
+    padding: 33px 43px 30px 107px;
+  }
+  .video__description{
+    @include fonts-2(15px, 30px);
+    padding: 0px 38px;
+    margin-bottom: 38px;
+  }
+  .video__order{
+    &.button{
+      width: 583px;
+      padding: 16px 219px;
+      margin-bottom: 44px;
+    }
+  }
+  .video__button{
+    top: 185px;
+    left: 283px;
+    &:hover{
+        width: 120px;
+        height: 90px;
+        top: 178px;
+        left: 274px;
+  }
+    &:active{
+        height: 80px;
+        width: 102px;
+        opacity: 0.6;
+        top: 185px;
+        left: 283px;
+      }
+  }
+  }
 @media (min-width: $desktop-width) {
   .video{
-    flex-direction: row;
+    margin-bottom: 104px;
   }
+  .video__wrapper{
+    flex-direction: row;
+    width: 1050px;
+  }
+   .video__player{
+     width: 682px;
+     height: 455px;
+   }
+   .video__container{
+     width: 367px;
+     padding-top: 62px;
+     &::before{
+       top: 43px;
+       left: 79px;
+     }
+   }
+   .video__title{
+     padding: 33px 54px 30px 76px;
+   }
+   .video__description{
+     padding-left: 75px;
+     padding-top: 4px;
+     margin-bottom: 46px;
+   }
+   .video__order{
+     &.button{
+       width: 230px;
+       padding: 16px 43px;
+       margin-left: 78px;
+     }
+   }
 }
