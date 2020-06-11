@@ -21,6 +21,13 @@
   flex-direction: column;
   padding: 0;
   border-top: 1px solid $akvamarin-color;
+  margin-bottom: 46px;
+  &:nth-child(2){
+    margin-bottom: 12px;
+  }
+  &:nth-child(3){
+    padding-top: 28px;
+  }
 }
 .order__radio{
   list-style: none;
@@ -33,19 +40,53 @@
     &:nth-child(2){
       padding-left: 59px;
       padding-top: 21px;
+      .order__radio--indicator{
+        top: 14px;
+      }
     }
   }
 }
 .order__radio--indicator{
-  width: 54px;
-  height: 54px;
-  background-image: url("../img/radiobutton.png");
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/radiobutton-mobile.png");
   background-repeat: no-repeat;
   position: absolute;
-
+  top: 25px;
+  left: -2px;
 }
 input[type="radio"]{
   display: none;
+}
+input[type="radio"]:checked + .order__radio--indicator{
+  background-image: url("../img/radiobutton-active-mobile.png");
+}
+.order__checkbox{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 23px;
+  li{
+    padding: 12px;
+    padding-left: 60px;
+    margin-bottom: 19px;
+    position: relative;
+  }
+}
+input[type="checkbox"]{
+  display: none;
+}
+input[type="checkbox"]:checked + .order__checkbox--indicator{
+  background-image: url("../img/checkbox-active-mobile.png");
+}
+.order__checkbox--indicator{
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/checkbox-mobile.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2px;
+  left: -2px;
 }
 .order__legend{
   @include fonts-1(17px, 16px);
@@ -53,7 +94,31 @@ input[type="radio"]{
   text-transform: uppercase;
   padding-right: 23px;
 }
-
+input[type="text"]{
+  border: none;
+  border-bottom: 2px solid $black-color;
+  padding: 14px 0;
+  margin-bottom: 21px;
+  @include fonts-2(17px, 18px);
+  color: $button-color;
+  &:hover{
+    border-color: $akvamarin-color;
+  }
+  &:active{
+    border-color: $akvamarin-color;
+  }
+  &:focus{
+    border-color: $akvamarin-color;
+  }
+}
+input[type="text"]::-webkit-input-placeholder {
+  @include fonts-2(17px, 18px);
+  color: $button-color;
+}
+input[type="text"]::-moz-placeholder {
+  @include fonts-2(17px, 18px);
+  color: $button-color;
+}
 @media (min-width: $tablet-width){
   .order__item{
     flex-wrap: wrap;

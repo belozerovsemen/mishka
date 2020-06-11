@@ -101,7 +101,7 @@
         <ul class="order__radio">
           <li>
             <label class="order__label" for="type-radio-1">
-              <input type="radio" name="type-radio" id="type-radio-1">
+              <input type="radio" name="type-radio" id="type-radio-1" checked>
               <span class="order__radio--indicator"></span>
               Аксессуар для интерьера
             </label>
@@ -119,38 +119,60 @@
       </fieldset>
       <fieldset class="order__item">
         <legend class="order__legend">Цвет</legend>
-        <label class="order__label" for="white-checkbox">
-          <input type="checkbox" name="white-checkbox" id="white-checkbox">
-          Белый
-        </label>
-        <label class="order__label" for="grey-checkbox">
-          <input type="checkbox" name="grey-checkbox" id="grey-checkbox">
-          Серый
-        </label>
-        <label class="order__label" for="tiffani-checkbox">
-          <input type="checkbox" name="tiffani-checkbox" id="tiffani-checkbox">
-          "Тиффани"
-        </label>
-        <label class="order__label" for="black-checkbox">
-          <input type="checkbox" name="black-checkbox" id="black-checkbox">
-          Черный
-        </label>
-        <label class="order__label" for="pink-checkbox">
-          <input type="checkbox" name="pink-checkbox" id="pink-checkbox">
-          Розовый
-        </label>
-        <label class="order__label" for="orange-checkbox">
-          <input type="checkbox" name="orange-checkbox" id="orange-checkbox">
-          Оранжевый
-        </label>
+          <ul class="order__checkbox">
+              <li>
+                  <label class="order__label" for="white-checkbox">
+                      <input type="checkbox" name="white-checkbox" id="white-checkbox" checked>
+                      <span class="order__checkbox--indicator"></span>
+                      Белый
+                  </label>
+              </li>
+              <li>
+                  <label class="order__label" for="grey-checkbox">
+                      <input type="checkbox" name="grey-checkbox" id="grey-checkbox" checked>
+                      <span class="order__checkbox--indicator"></span>
+                      Серый
+                  </label>
+              </li>
+              <li>
+                  <label class="order__label" for="tiffani-checkbox">
+                      <input type="checkbox" name="tiffani-checkbox" id="tiffani-checkbox">
+                      <span class="order__checkbox--indicator"></span>
+                      &laquo;Тиффани&raquo;
+                  </label>
+              </li>
+              <li>
+                  <label class="order__label" for="black-checkbox">
+                      <input type="checkbox" name="black-checkbox" id="black-checkbox">
+                      <span class="order__checkbox--indicator"></span>
+                      Черный
+                  </label>
+              </li>
+              <li>
+                  <label class="order__label" for="pink-checkbox">
+                      <input type="checkbox" name="pink-checkbox" id="pink-checkbox">
+                      <span class="order__checkbox--indicator"></span>
+                      Розовый
+                  </label>
+              </li>
+              <li>
+                  <label class="order__label" for="orange-checkbox">
+                      <input type="checkbox" name="orange-checkbox" id="orange-checkbox">
+                      <span class="order__checkbox--indicator"></span>
+                      Оранжевый
+                  </label>
+              </li>
+          </ul>
+
       </fieldset>
+
       <fieldset class="order__item">
         <legend class="order__legend">ФИО</legend>
         <label class="order__label" for="name-input">Имя:</label>
         <input type="text" name="name-input" id="name-input" placeholder="Введите ваше имя*">
         <label class="order__label" for="surname-input">Фамилия:</label>
         <input type="text" name="surname-input" id="surname-input" placeholder="Укажите фамилию*">
-        <label class="order__label" for="patronymic-input">Отчество</label>
+        <label class="order__label" for="patronymic-input">Отчество:</label>
         <input type="text" name="patronymic-input" id="patronymic-input" placeholder="Отчество, если желаете">
       </fieldset>
       <fieldset class="order__item">

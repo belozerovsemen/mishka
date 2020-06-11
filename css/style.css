@@ -1356,7 +1356,12 @@
   display: flex;
   flex-direction: column;
   padding: 0;
-  border-top: 1px solid #63d1bb; }
+  border-top: 1px solid #63d1bb;
+  margin-bottom: 46px; }
+  .order__item:nth-child(2) {
+    margin-bottom: 12px; }
+  .order__item:nth-child(3) {
+    padding-top: 28px; }
 
 .order__radio {
   list-style: none;
@@ -1369,16 +1374,49 @@
     .order__radio li:nth-child(2) {
       padding-left: 59px;
       padding-top: 21px; }
+      .order__radio li:nth-child(2) .order__radio--indicator {
+        top: 14px; }
 
 .order__radio--indicator {
-  width: 54px;
-  height: 54px;
-  background-image: url("../img/radiobutton.png");
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/radiobutton-mobile.png");
   background-repeat: no-repeat;
-  position: absolute; }
+  position: absolute;
+  top: 25px;
+  left: -2px; }
 
 input[type="radio"] {
   display: none; }
+
+input[type="radio"]:checked + .order__radio--indicator {
+  background-image: url("../img/radiobutton-active-mobile.png"); }
+
+.order__checkbox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 23px; }
+  .order__checkbox li {
+    padding: 12px;
+    padding-left: 60px;
+    margin-bottom: 19px;
+    position: relative; }
+
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"]:checked + .order__checkbox--indicator {
+  background-image: url("../img/checkbox-active-mobile.png"); }
+
+.order__checkbox--indicator {
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/checkbox-mobile.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 2px;
+  left: -2px; }
 
 .order__legend {
   font-family: "Open Sans Bold", Arial, sans-serif;
@@ -1387,6 +1425,34 @@ input[type="radio"] {
   color: #63d1bb;
   text-transform: uppercase;
   padding-right: 23px; }
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid #000000;
+  padding: 14px 0;
+  margin-bottom: 21px;
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  color: #444444; }
+  input[type="text"]:hover {
+    border-color: #63d1bb; }
+  input[type="text"]:active {
+    border-color: #63d1bb; }
+  input[type="text"]:focus {
+    border-color: #63d1bb; }
+
+input[type="text"]::-webkit-input-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  color: #444444; }
+
+input[type="text"]::-moz-placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  font-family: "Open Sans Regular", Arial, sans-serif;
+  color: #444444; }
 
 @media (min-width: 768px) {
   .order__item {
