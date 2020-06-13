@@ -1572,7 +1572,31 @@ input[name="email-input"] {
     line-height: 30px;
     font-family: "Open Sans Regular", Arial, sans-serif; }
   .order__form {
+    font-family: "Open Sans Bold", Arial, sans-serif;
+    font-size: 19px;
+    line-height: 18px;
     width: 668px; }
+  .order__item {
+    position: relative;
+    padding-top: 17px; }
+  .order__legend {
+    position: absolute;
+    top: 50px; }
+  .order__radio {
+    margin-left: 167px; }
+    .order__radio li {
+      padding: 33px 0 27px 78px; }
+      .order__radio li:nth-child(2) {
+        padding: 33px 0 27px 78px; }
+  .order__radio--indicator {
+    width: 52px;
+    height: 52px;
+    top: 18px; }
+  input[type="radio"]:checked + .order__radio--indicator::before {
+    width: 21px;
+    height: 21px;
+    top: 13px;
+    left: 13px; }
   .order__item {
     flex-wrap: wrap;
     border: none; }
