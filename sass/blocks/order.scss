@@ -3,6 +3,7 @@
 
 .order{
   padding-top: 20px;
+  padding-bottom: 55px;
 }
 .order__description{
   @include fonts-2(13px, 24px);
@@ -27,6 +28,19 @@
   }
   &:nth-child(3){
     padding-top: 28px;
+    margin-bottom: 9px;
+  }
+  &:nth-child(4){
+    padding-top: 7px;
+    margin-bottom: 11px;
+  }
+  &:nth-child(5){
+    padding-top: 6px;
+    margin-bottom: 10px;
+  }
+  &:nth-child(6){
+    padding-top: 26px;
+    margin-bottom: 2px;
   }
 }
 .order__radio{
@@ -49,30 +63,31 @@
 .order__radio--indicator{
   width: 40px;
   height: 40px;
-  background-image: url("../img/radiobutton.png");
-  background-repeat: no-repeat;
+  border: 2px solid $button-color;
+  border-radius: 50%;
   position: absolute;
   top: 25px;
   left: -2px;
   background-size: 40px;
   &:hover{
-    background-image: url("../img/radiobutton-hover.png");
+  border-color: $akvamarin-color;
   }
   &:active{
-    background-image: url("../img/radiobutton-down.png");
+    border-color: $active-color;
   }
 }
 input[type="radio"]{
   display: none;
 }
-input[type="radio"]:checked + .order__radio--indicator{
-  background-image: url("../img/radiobutton-active.png");
-  &:hover{
-    background-image: url("../img/radiobutton-active-hover.png");
-  }
-  &:active{
-    background-image: url("../img/radiobutton-active-down.png");
-  }
+input[type="radio"]:checked + .order__radio--indicator::before{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: $akvamarin-color;
+  border-radius: 50%;
+  top: 10px;
+ left: 10px;
 }
 .order__checkbox{
   list-style: none;
@@ -90,16 +105,26 @@ input[type="checkbox"]{
   display: none;
 }
 input[type="checkbox"]:checked + .order__checkbox--indicator{
-  background-image: url("../img/checkbox-active-mobile.png");
+  background-image: url("../img/checkbox-active.svg");
+  background-size: 23px;
+  background-position: 6px;
+  background-repeat: no-repeat;
 }
 .order__checkbox--indicator{
   width: 40px;
   height: 40px;
-  background-image: url("../img/checkbox-mobile.png");
   background-repeat: no-repeat;
   position: absolute;
   top: 2px;
   left: -2px;
+  background-size: 40px;
+  border: 2px solid $button-color;
+  &:hover{
+  border-color: $akvamarin-color;
+  }
+  &:active{
+    border-color: $active-color;
+  }
 }
 .order__legend{
   @include fonts-1(17px, 16px);
@@ -123,18 +148,114 @@ input[type="text"]{
   &:focus{
     border-color: $akvamarin-color;
   }
+  &::-webkit-input-placeholder {
+    @include fonts-2(17px, 18px);
+    color: $button-color;
+  }
+  &::-moz-placeholder {
+    @include fonts-2(17px, 18px);
+    color: $button-color;
+  }
 }
-input[type="text"]::-webkit-input-placeholder {
-  @include fonts-2(17px, 18px);
-  color: $button-color;
+
+input[name="number-input"]{
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 26px;
+  background-position: 225px;
+  &:hover{
+    background-image: url("../img/phone-icon-hover.svg");
+  }
+  &:active{
+    background-image: url("../img/phone-icon-hover.svg");
+  }
+  &:focus{
+    background-image: url("../img/phone-icon-hover.svg");
+  }
 }
-input[type="text"]::-moz-placeholder {
-  @include fonts-2(17px, 18px);
-  color: $button-color;
+input[name="email-input"]{
+  background-image: url("../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: 225px;
+  &:hover{
+    background-image: url("../img/mail-icon-hover.svg");
+  }
+  &:active{
+    background-image: url("../img/mail-icon-hover.svg");
+  }
+  &:focus{
+    background-image: url("../img/mail-icon-hover.svg");
+  }
 }
+.order__area{
+ resize: none;
+ width: 258px;
+ height: 141px;
+ border: 2px solid $button-color;
+ padding: 17px;
+ @include fonts-2(17px, 18px);
+ color: $button-color;
+ &:hover{
+   border-color: $akvamarin-color;
+ }
+ &:active{
+   border-color: $akvamarin-color;
+ }
+ &:focus{
+   border-color: $akvamarin-color;
+ }
+ &::-webkit-input-placeholder {
+   @include fonts-2(17px, 18px);
+   color: $button-color;
+ }
+ &::-moz-placeholder {
+   @include fonts-2(17px, 18px);
+   color: $button-color;
+}
+}
+.order__wrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.order__required{
+  @include fonts-2(14px, 16px);
+  order: -1;
+  margin-bottom: 32px;
+}
+.order__submit{
+  &.button{
+    padding: 14px 40px;
+    @include button;
+    background: transparent;
+  }
+}
+
 @media (min-width: $tablet-width){
+  .order{
+    background-image: url("../img/promo-line.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: -11px;
+    padding-top: 0;
+  }
+  .order__container{
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 85px;
+  }
+  .order__description{
+    padding: 0;
+    @include fonts-2(17px, 30px);
+  }
+  .order__form{
+    width: 668px;
+  }
   .order__item{
     flex-wrap: wrap;
+    border: none;
   }
   .order__legend{
     align-self: flex-start;

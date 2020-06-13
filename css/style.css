@@ -197,7 +197,8 @@
     text-align: center;
     margin-top: 96px;
     margin-bottom: 374px; }
-  .promo__title--catalog {
+  .promo__title--catalog,
+  .promo__title--form {
     margin-bottom: 78px;
     margin-top: 0; }
   .promo__delivery {
@@ -1334,7 +1335,8 @@
     margin-left: 78px; } }
 
 .order {
-  padding-top: 20px; }
+  padding-top: 20px;
+  padding-bottom: 55px; }
 
 .order__description {
   font-size: 13px;
@@ -1361,7 +1363,17 @@
   .order__item:nth-child(2) {
     margin-bottom: 12px; }
   .order__item:nth-child(3) {
-    padding-top: 28px; }
+    padding-top: 28px;
+    margin-bottom: 9px; }
+  .order__item:nth-child(4) {
+    padding-top: 7px;
+    margin-bottom: 11px; }
+  .order__item:nth-child(5) {
+    padding-top: 6px;
+    margin-bottom: 10px; }
+  .order__item:nth-child(6) {
+    padding-top: 26px;
+    margin-bottom: 2px; }
 
 .order__radio {
   list-style: none;
@@ -1380,26 +1392,29 @@
 .order__radio--indicator {
   width: 40px;
   height: 40px;
-  background-image: url("../img/radiobutton.png");
-  background-repeat: no-repeat;
+  border: 2px solid #444444;
+  border-radius: 50%;
   position: absolute;
   top: 25px;
   left: -2px;
   background-size: 40px; }
   .order__radio--indicator:hover {
-    background-image: url("../img/radiobutton-hover.png"); }
+    border-color: #63d1bb; }
   .order__radio--indicator:active {
-    background-image: url("../img/radiobutton-down.png"); }
+    border-color: #7c7c7c; }
 
 input[type="radio"] {
   display: none; }
 
-input[type="radio"]:checked + .order__radio--indicator {
-  background-image: url("../img/radiobutton-active.png"); }
-  input[type="radio"]:checked + .order__radio--indicator:hover {
-    background-image: url("../img/radiobutton-active-hover.png"); }
-  input[type="radio"]:checked + .order__radio--indicator:active {
-    background-image: url("../img/radiobutton-active-down.png"); }
+input[type="radio"]:checked + .order__radio--indicator::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #63d1bb;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px; }
 
 .order__checkbox {
   list-style: none;
@@ -1416,16 +1431,24 @@ input[type="checkbox"] {
   display: none; }
 
 input[type="checkbox"]:checked + .order__checkbox--indicator {
-  background-image: url("../img/checkbox-active-mobile.png"); }
+  background-image: url("../img/checkbox-active.svg");
+  background-size: 23px;
+  background-position: 6px;
+  background-repeat: no-repeat; }
 
 .order__checkbox--indicator {
   width: 40px;
   height: 40px;
-  background-image: url("../img/checkbox-mobile.png");
   background-repeat: no-repeat;
   position: absolute;
   top: 2px;
-  left: -2px; }
+  left: -2px;
+  background-size: 40px;
+  border: 2px solid #444444; }
+  .order__checkbox--indicator:hover {
+    border-color: #63d1bb; }
+  .order__checkbox--indicator:active {
+    border-color: #7c7c7c; }
 
 .order__legend {
   font-family: "Open Sans Bold", Arial, sans-serif;
@@ -1450,22 +1473,109 @@ input[type="text"] {
     border-color: #63d1bb; }
   input[type="text"]:focus {
     border-color: #63d1bb; }
+  input[type="text"]::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    color: #444444; }
+  input[type="text"]::-moz-placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    color: #444444; }
 
-input[type="text"]::-webkit-input-placeholder {
+input[name="number-input"] {
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 26px;
+  background-position: 225px; }
+  input[name="number-input"]:hover {
+    background-image: url("../img/phone-icon-hover.svg"); }
+  input[name="number-input"]:active {
+    background-image: url("../img/phone-icon-hover.svg"); }
+  input[name="number-input"]:focus {
+    background-image: url("../img/phone-icon-hover.svg"); }
+
+input[name="email-input"] {
+  background-image: url("../img/mail-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: 225px; }
+  input[name="email-input"]:hover {
+    background-image: url("../img/mail-icon-hover.svg"); }
+  input[name="email-input"]:active {
+    background-image: url("../img/mail-icon-hover.svg"); }
+  input[name="email-input"]:focus {
+    background-image: url("../img/mail-icon-hover.svg"); }
+
+.order__area {
+  resize: none;
+  width: 258px;
+  height: 141px;
+  border: 2px solid #444444;
+  padding: 17px;
   font-size: 17px;
   line-height: 18px;
   font-family: "Open Sans Regular", Arial, sans-serif;
   color: #444444; }
+  .order__area:hover {
+    border-color: #63d1bb; }
+  .order__area:active {
+    border-color: #63d1bb; }
+  .order__area:focus {
+    border-color: #63d1bb; }
+  .order__area::-webkit-input-placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    color: #444444; }
+  .order__area::-moz-placeholder {
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "Open Sans Regular", Arial, sans-serif;
+    color: #444444; }
 
-input[type="text"]::-moz-placeholder {
-  font-size: 17px;
-  line-height: 18px;
+.order__wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column; }
+
+.order__required {
+  font-size: 14px;
+  line-height: 16px;
   font-family: "Open Sans Regular", Arial, sans-serif;
-  color: #444444; }
+  order: -1;
+  margin-bottom: 32px; }
+
+.order__submit.button {
+  padding: 14px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #444444;
+  background: transparent; }
 
 @media (min-width: 768px) {
+  .order {
+    background-image: url("../img/promo-line.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    margin-top: -11px;
+    padding-top: 0; }
+  .order__container {
+    width: 668px;
+    margin: 0 auto;
+    padding-top: 85px; }
+  .order__description {
+    padding: 0;
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "Open Sans Regular", Arial, sans-serif; }
+  .order__form {
+    width: 668px; }
   .order__item {
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    border: none; }
   .order__legend {
     align-self: flex-start; } }
 

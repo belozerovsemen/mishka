@@ -92,10 +92,11 @@
 
 
   <section class="order">
+    <div class="order__container">
     <p class="order__description">
       Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
     </p>
-    <form class="order__form"action="https://echo.htmlacademy.ru" method="post">
+    <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
       <fieldset class="order__item">
         <legend class="order__legend">Тип</legend>
         <ul class="order__radio">
@@ -169,27 +170,31 @@
       <fieldset class="order__item">
         <legend class="order__legend">ФИО</legend>
         <label class="order__label" for="name-input">Имя:</label>
-        <input type="text" name="name-input" id="name-input" placeholder="Введите ваше имя*">
+        <input type="text" name="name-input" id="name-input" placeholder="Введите ваше имя*" required>
         <label class="order__label" for="surname-input">Фамилия:</label>
-        <input type="text" name="surname-input" id="surname-input" placeholder="Укажите фамилию*">
+        <input type="text" name="surname-input" id="surname-input" placeholder="Укажите фамилию*" required>
         <label class="order__label" for="patronymic-input">Отчество:</label>
         <input type="text" name="patronymic-input" id="patronymic-input" placeholder="Отчество, если желаете">
       </fieldset>
       <fieldset class="order__item">
         <legend class="order__legend">Тел</legend>
-        <input type="number" placeholder="+7 XXX XX XX*" name="number-input">
+        <input type="text" placeholder="+7 XXX XX XX*" name="number-input" required>
       </fieldset>
       <fieldset class="order__item">
         <legend class="order__legend">E-mail</legend>
-        <input type="text" name="email-input" placeholder="Ваш Email*">
+        <input type="text" name="email-input" placeholder="Ваш Email*" required>
       </fieldset>
       <fieldset class="order__item">
-        <legend>Доп</legend>
-        <textarea name="description-area" id="description-area" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        <legend class="order__legend">Доп</legend>
+        <textarea class="order__area" name="description-area" id="description-area" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
-      <button type="submit">Отправить заказ</button>
-      <p>*Поля обязательны для заполнения</p>
+      <div class="order__wrapper">
+        <button class="order__submit button" type="submit">Отправить заказ</button>
+        <p class="order__required">*Поля обязательны для заполнения</p>
+      </div>
+
     </form>
+    </div>
   </section>
   <footer class="page-footer">
       <div class="footer__container">
