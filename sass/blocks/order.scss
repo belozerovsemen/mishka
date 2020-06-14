@@ -18,8 +18,6 @@
 }
 .order__item{
   border: none;
-  display: flex;
-  flex-direction: column;
   padding: 0;
   border-top: 1px solid $akvamarin-color;
   margin-bottom: 46px;
@@ -137,6 +135,7 @@ input[type="text"]{
   border-bottom: 2px solid $black-color;
   padding: 14px 0;
   margin-bottom: 21px;
+  background: transparent;
   @include fonts-2(17px, 18px);
   color: $button-color;
   &:hover{
@@ -239,29 +238,79 @@ input[name="email-input"]{
     background-repeat: no-repeat;
     background-position: top;
     margin-top: -11px;
-    padding-top: 0;
-  }
-  .order__container{
-    width: 668px;
-    margin: 0 auto;
     padding-top: 85px;
+    padding-bottom: 49px;
   }
+
   .order__description{
     padding: 0;
     @include fonts-2(17px, 30px);
+    width: 668px;
+    margin: 0 auto;
+    margin-bottom: 39px;
   }
   .order__form{
     @include fonts-1(19px, 18px);
-    width: 668px;
+    width: 100%;
   }
   .order__item{
-    position: relative;
-    padding-top: 17px;
+     position: relative;
+     padding: 0 50px;
+     flex-wrap: wrap;
+     border: none;
+     &:nth-child(1){
+       margin-bottom: 41px;
+      .order__legend{
+         top: 35px;
+       }
+     }
+     &:nth-child(2){
+       background-color: $grey-background;
+       padding-top: 48px;
+       padding-bottom: 22px;
+      .order__legend{
+         top: 65px;
+       }
+     }
+     &:nth-child(3){
+       padding-top: 37px;
+       padding-bottom: 18px;
+       .order__legend{
+         top: 54px;
+       }
+       .order__label{
+         display: inline-block;
+         margin-left: 165px;
+         margin-right: 18px;
+       }
+     }
+     &:nth-child(4){
+       background-color: $grey-background;
+       margin-bottom: 0;
+       padding-top: 49px;
+       .order__legend{
+         top: 66px;
+         }
+     }
+     &:nth-child(5){
+       background-color: $grey-background;
+       padding-top: 0;
+       padding-bottom: 27px;
+       .order__legend{
+         top: 17px;
+       }
+     }
+     &:nth-child(6){
+       padding-top: 40px;
+       .order__legend{
+         top: 56px;
+       }
+     }
+
   }
   .order__legend{
     position: absolute;
-    top: 50px;
-  }
+}
   .order__radio{
     margin-left: 167px;
     li{
@@ -282,17 +331,182 @@ input[name="email-input"]{
     top: 13px;
     left: 13px;
   }
-  .order__item{
+  .order__checkbox{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     flex-wrap: wrap;
-    border: none;
+    margin-left: 168px;
+    padding-top: 0;
+    li{
+      padding-left: 79px;
+      margin-right: 106px;
+      margin-bottom: 36px;
+      &:nth-child(even){
+        margin-right: 0;
+      }
+      &:nth-child(3){
+        margin-right: 55px;
+      }
+      &:nth-child(5){
+        margin-right: 83px;
+      }
+    }
   }
-  .order__legend{
-    align-self: flex-start;
+  .order__checkbox--indicator{
+    width: 52px;
+    height: 52px;
   }
+input[type="checkbox"]:checked + .order__checkbox--indicator{
+  background-size: 32px;
+  background-position: 9px;
+}
+input[type="text"]{
+  margin-bottom: 23px;
+  padding-left: 19px;
+  &::-webkit-input-placeholder {
+    @include fonts-2(19px, 18px);
+    }
+  &::-moz-placeholder {
+    @include fonts-2(19px, 18px);
+    }
+}
+input[name="name-input"]{
+  width: 427px;
+}
+input[name="surname-input"]{
+  width: 375px;
+}
+input[name="patronymic-input"]{
+  width: 375px;
+}
+input[name="number-input"]{
+  width: 501px;
+  margin-left: 166px;
+  background-position: 449px;
+}
+input[name="email-input"]{
+  width: 501px;
+  margin-left: 166px;
+  background-position: 449px;
+}
+.order__area{
+  width: 501px;
+  height: 142px;
+  margin-left: 165px;
+  &::-webkit-input-placeholder {
+    @include fonts-2(19px, 18px);
+    }
+  &::-moz-placeholder {
+    @include fonts-2(19px, 18px);
+    }
+}
+.order__wrapper{
+  flex-direction: row;
+  width: 668px;
+  margin: 0 auto;
+  padding-top: 51px;
+}
+.order__required{
+  order: 0;
+}
+.order__submit{
+  &.button{
+    margin: 0;
+    min-width: 230px;
+    padding: 0 21px;
+    height: 52px;
+    @include fonts-1(17px, 16px);
+    margin-right: 136px;
+    }
+}
+.order__required{
+  @include fonts-2(17px, 30px);
+  margin: 0;
+  margin-top: 8px;
+}
 }
 @media (min-width: $desktop-width){
-  .order__item:nth-of-type(2){
-    flex-direction: row;
+.order{
+  width: 1150px;
+  margin: 0 auto;
+  margin-top: -18px;
+  padding-top: 141px;
+}
+.order__description{
+  width: 700px;
+}
+.order__item{
+  &:nth-child(1){
+    .order__legend{
+      top: 35px;
+      left: 111px;
+    }
   }
-
+  &:nth-child(2){
+    padding-bottom: 29px;
+  }
+  &:nth-child(3){
+    .order__label{
+      margin-left: 173px;
+    }
+  }
+}
+.order__legend{
+  left: 107px;
+}
+.order__radio{
+  margin-left: 174px;
+}
+.order__checkbox{
+  margin-left: 175px;
+  li{
+    padding-top: 17px;
+    margin-bottom: 28px;
+    &:nth-child(2){
+      margin-right: 106px;
+    }
+    &:nth-child(3){
+      margin-right: 0;
+    }
+    &:nth-child(4){
+      margin-right: 91px;
+    }
+    &:nth-child(5){
+      margin-right: 84px;
+    }
+    &:nth-child(6){
+      margin-right: 0;
+    }
+  }
+}
+input[name="name-input"]{
+  width: 626px;
+}
+input[name="surname-input"],
+{
+  width: 573px;
+}
+input[name="patronymic-input"]{
+  width: 573px;
+}
+input[name="number-input"],
+input[name="email-input"]{
+  width: 700px;
+  background-position: 666px;
+  margin-left: 172px;
+}
+.order__area{
+  width: 700px;
+  margin-left: 172px;
+}
+.order__wrapper{
+  width: 700px;
+  padding-top: 47px;
+}
+.order__submit{
+  &.button{
+    margin-right: 168px;
+  }
+}
 }
