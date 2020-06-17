@@ -35,6 +35,7 @@
   display: block;
   cursor: pointer;
   background-color: #fff;
+  outline: none;
 }
 .main-nav--closed .main-nav__toggle::before{
   content: "";
@@ -78,9 +79,6 @@
   display: block;
   width: 90px;
   height: 58px;
-  background-image: url("../img/logo-2.svg");
-  background-repeat: no-repeat;
-  background-size: 90px;
   margin: 0 auto;
   &:hover{
     opacity: 0.6;
@@ -110,9 +108,7 @@
     padding-top: 0;
   }
   .page-header__logo{
-    background-image: url("../img/logo-4.svg");
     width: 111px;
-    background-size: 111px;
     margin: 0;
   }
   .main-nav__toggle{
@@ -139,9 +135,7 @@
     margin: 0 auto;
   }
   .page-header__logo{
-    background-image: url("../img/logo.svg");
     width: 153px;
-    background-size: 153px;
     height: 100%;
   }
   .page-header__logo--wrapper{

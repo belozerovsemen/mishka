@@ -129,7 +129,7 @@
     margin-bottom: 37px;
   }
   .product__image{
-    flex-basis: 50%;
+    width: 334px;
   }
   .product__price{
     @include fonts-1(20px, 24px);
@@ -144,7 +144,7 @@
 }
 @media (min-width: $desktop-width){
   .product{
-    margin-top: -35px;
+    margin-top: -34px;
     background-size: 1178px;
   }
   .product__title{

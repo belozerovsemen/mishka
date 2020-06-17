@@ -1,17 +1,25 @@
 @import "mixins";
 .promo{
-  background-image: url("../img/promo-background.jpg");
+  background-image: url("../img/promo-background-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 573px auto;
   background-position: center -8%;
   padding-top: 58px;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/promo-background-mobile-2x.jpg");
+    background-size: 320px auto;
+  }
+  &.promo--catalog{
+    background-image: none;
+    background: $grey-background;
+    padding-bottom: 1px;
+  }
+  &.promo--form{
+    background-image: none;
+    background: $grey-background;
+    padding-bottom: 1px;
+  }
 }
-.promo--catalog,
-.promo--form{
-  background-image: none;
-  background: $grey-background;
-  padding-bottom: 1px;
-}
+
 .promo__delivery{
   @include fonts-2(15px,24px);
   display: none;
@@ -34,7 +42,11 @@
   .promo{
     padding-top: 0;
     margin-top: -40px;
-    background-size: 149% auto;
+    background-image: url("../img/promo-background.jpg");
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-background-2x.jpg");
+      background-size: 1150px auto;
+    }
   }
   .promo--catalog{
     padding-bottom: 1px;
@@ -71,8 +83,12 @@
   }
   .promo{
     margin-top: 0;
-    background-size: 1149px auto;
-    background-position: center 15%;
+    background-size: 1150px auto;
+    background-position: center 0px;
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/promo-background-2x.jpg");
+      background-size: 1150px auto;
+    }
   }
   .promo--catalog,
   .promo--form{

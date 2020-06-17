@@ -37,6 +37,12 @@
   color: $black-color;
   text-decoration: none;
   border-bottom: 1px solid $akvamarin-color;
+  &:hover{
+    color: $akvamarin-color;
+  }
+  &:active{
+    opacity: 0.3;
+  }
 }
 .contacts__address{
   @include fonts-2(15px, 30px);

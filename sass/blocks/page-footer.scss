@@ -43,10 +43,7 @@
   margin-bottom: 15px;
   svg{
     &:hover{
-      .st1{
-        fill: $akvamarin-color-2;
-        stroke: $akvamarin-color-2;
-      }
+      fill: $akvamarin-color-2;
     }
     &:active{
       opacity: 0.3;
@@ -63,9 +60,8 @@
     opacity: 0.3;
   }
 }
-.copyright__text:hover +  svg  .st1{
+.copyright__text:hover +  svg{
   fill: $akvamarin-color-2;
-  stroke: $akvamarin-color-2;
 }
 .copyright__text:active +  svg {
   opacity: 0.3;
@@ -75,9 +71,7 @@
   text-decoration: none;
   &:hover{
     svg{
-      .st0{
-        fill: $akvamarin-color;
-      }
+      fill: $akvamarin-color-4;
     }
   }
   &:active{
@@ -97,7 +91,9 @@
     display: block;
     margin-right: 79px;
     &:hover{
-      opacity: 0.6;
+      svg{
+        fill: $akvamarin-color-4;
+      }
     }
     &:active{
       opacity: 0.1;
