@@ -1994,6 +1994,8 @@ body {
   z-index: 3;
   position: fixed;
   top: 265px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   box-shadow: 0px 15px 14px 1px #ccc; }
 
@@ -2062,8 +2064,6 @@ body {
 
 @media (min-width: 768px) {
   .buy-modal {
-    left: 50%;
-    margin-left: -285px;
     top: 30%;
     width: 567px;
     border: 1px solid #c7c7c7; }
