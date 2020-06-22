@@ -7,7 +7,6 @@
   padding-top: 58px;
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/promo-background-mobile-2x.jpg");
-    background-size: 320px auto;
   }
   &.promo--catalog{
     background-image: none;
