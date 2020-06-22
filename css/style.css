@@ -141,6 +141,7 @@
   background-image: url("../img/promo-background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center -8%;
+  background-size: 100% 73%;
   padding-top: 58px; }
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .promo {
@@ -181,7 +182,8 @@
   .promo {
     padding-top: 0;
     margin-top: -40px;
-    background-image: url("../img/promo-background.jpg"); } }
+    background-image: url("../img/promo-background.jpg");
+    background-size: auto; } }
   @media (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
     .promo {
       background-image: url("../img/promo-background-2x.jpg");
@@ -1910,7 +1912,7 @@ body {
   .user-list__item:nth-child(1) {
     padding: 30px 60px 24px 27px; }
   .user-list__item:nth-child(2) {
-    padding: 31px 35px 24px 46px; }
+    padding: 31px 35px 31px 46px; }
   .user-list__item a:hover {
     opacity: 0.6; }
   .user-list__item a:active {
@@ -1989,8 +1991,7 @@ body {
 .buy-modal {
   width: 320px;
   padding: 6px 0 46px 0;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
+  border: 1px solid #c7c7c7;
   z-index: 3;
   position: fixed;
   top: 265px;

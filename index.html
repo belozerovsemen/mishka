@@ -260,74 +260,12 @@
                 </li>
             </ul>
             <button class="buy-modal__button button">Добавить</button>
-        </div>
     </section>
-</div>
 
-<script>
-    'use strict';
-
-    let navMain = document.querySelector('.main-nav');
-    let navToggle = document.querySelector('.main-nav__toggle');
-
-    navToggle.addEventListener('click', function () {
-        if (navMain.classList.contains('main-nav--closed')) {
-            navMain.classList.remove('main-nav--closed');
-            navMain.classList.add('main-nav--opened');
-        } else {
-            navMain.classList.add('main-nav--closed');
-            navMain.classList.remove('main-nav--opened');
-        }
-    });
-
-</script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu4h_KgZ4s4uXVtog7YjHKjm0N5SMnM08&callback=initMap">
 </script>
+    <script src="js/script.js"></script>
 
-<script>
-    function initMap() {
-        let element = document.getElementById('map');
-        let options = {
-            zoom: 17,
-            center: {lat: 59.938635, lng: 30.323118}
-        };
-        let myMap = new google.maps.Map(element, options);
-
-        addMarker({lat: 59.938635, lng: 30.323118});
-
-        function addMarker(coordinates) {
-            let marker = new google.maps.Marker({
-                position: coordinates,
-                map: myMap,
-                icon: 'https://belozerovsemen.github.io/mishka/img/map-pin.png'
-            });
-        }
-    }
-</script>
-<script>
-    'use strict';
-
-    let buyButton = document.querySelector(".product__order");
-    let modal = document.querySelector(".popup-fade");
-    let modalClose = document.querySelector(".buy-modal__button");
-
-    buyButton.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        modal.classList.add("modal-show");
-    });
-    modalClose.addEventListener("click", function(evt) {
-        evt.preventDefault();
-        modal.classList.remove("modal-show");
-    });
-    window.addEventListener("keydown", function (evt) {
-     evt.preventDefault();
-     if (evt.keyCode === 27) {
-     if (modal.classList.contains("modal-show")) {
-      modal.classList.remove("modal-show");
-    }
-    }
-    });
-</script>
 </body>
 </html>
